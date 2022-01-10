@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #924",
+	"id": "924",
+	"image": "7-1-10.png",
+	"name": "Hades Fire Genesis (Level 10)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Hades"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Fire"
+	},
+		{
+			"trait_type": "Level",
+			"value": "10"
+	}
+	]
+}

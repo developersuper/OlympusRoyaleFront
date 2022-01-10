@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #89",
+	"id": "89",
+	"image": "13-2-6.png",
+	"name": "Hestia Lightning Genesis (Level 6)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Hestia"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Lightning"
+	},
+		{
+			"trait_type": "Level",
+			"value": "6"
+	}
+	]
+}

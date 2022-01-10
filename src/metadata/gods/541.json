@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #541",
+	"id": "541",
+	"image": "7-4-1.png",
+	"name": "Hades Arcane Genesis (Level 1)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Hades"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Arcane"
+	},
+		{
+			"trait_type": "Level",
+			"value": "1"
+	}
+	]
+}

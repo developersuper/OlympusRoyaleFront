@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #963",
+	"id": "963",
+	"image": "12-4-5.png",
+	"name": "Hermes Arcane Genesis (Level 5)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Hermes"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Arcane"
+	},
+		{
+			"trait_type": "Level",
+			"value": "5"
+	}
+	]
+}

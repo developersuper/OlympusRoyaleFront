@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #874",
+	"id": "874",
+	"image": "7-1-7.png",
+	"name": "Hades Fire Genesis (Level 7)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Hades"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Fire"
+	},
+		{
+			"trait_type": "Level",
+			"value": "7"
+	}
+	]
+}

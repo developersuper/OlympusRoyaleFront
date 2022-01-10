@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #816",
+	"id": "816",
+	"image": "14-4-9.png",
+	"name": "Perseus Arcane Genesis (Level 9)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Perseus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Arcane"
+	},
+		{
+			"trait_type": "Level",
+			"value": "9"
+	}
+	]
+}

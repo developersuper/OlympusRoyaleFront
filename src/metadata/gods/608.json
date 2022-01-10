@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #608",
+	"id": "608",
+	"image": "16-3-6.png",
+	"name": "Poseidon Earth Genesis (Level 6)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Poseidon"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Earth"
+	},
+		{
+			"trait_type": "Level",
+			"value": "6"
+	}
+	]
+}

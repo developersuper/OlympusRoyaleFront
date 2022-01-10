@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #846",
+	"id": "846",
+	"image": "2-3-8.png",
+	"name": "Ares Earth Genesis (Level 8)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Ares"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Earth"
+	},
+		{
+			"trait_type": "Level",
+			"value": "8"
+	}
+	]
+}

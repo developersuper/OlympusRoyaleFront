@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #1000",
+	"id": "1000",
+	"image": "0-1-2.png",
+	"name": "Aphrodite Fire Genesis (Level 2)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Aphrodite"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Fire"
+	},
+		{
+			"trait_type": "Level",
+			"value": "2"
+	}
+	]
+}

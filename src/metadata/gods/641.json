@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #641",
+	"id": "641",
+	"image": "6-3-9.png",
+	"name": "Dionysus Earth Genesis (Level 9)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Dionysus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Earth"
+	},
+		{
+			"trait_type": "Level",
+			"value": "9"
+	}
+	]
+}

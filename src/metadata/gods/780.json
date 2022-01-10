@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #780",
+	"id": "780",
+	"image": "8-4-6.png",
+	"name": "Helios Arcane Genesis (Level 6)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Helios"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Arcane"
+	},
+		{
+			"trait_type": "Level",
+			"value": "6"
+	}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #62",
+	"id": "62",
+	"image": "10-5-10.png",
+	"name": "Hera Water Genesis (Level 10)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Hera"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Water"
+	},
+		{
+			"trait_type": "Level",
+			"value": "10"
+	}
+	]
+}

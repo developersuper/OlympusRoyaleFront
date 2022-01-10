@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #302",
+	"id": "302",
+	"image": "3-4-8.png",
+	"name": "Artemis Arcane Genesis (Level 8)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Artemis"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Arcane"
+	},
+		{
+			"trait_type": "Level",
+			"value": "8"
+	}
+	]
+}

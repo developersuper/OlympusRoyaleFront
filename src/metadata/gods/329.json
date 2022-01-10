@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #329",
+	"id": "329",
+	"image": "8-3-4.png",
+	"name": "Helios Earth Genesis (Level 4)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Helios"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Earth"
+	},
+		{
+			"trait_type": "Level",
+			"value": "4"
+	}
+	]
+}

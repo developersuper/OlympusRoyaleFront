@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #376",
+	"id": "376",
+	"image": "18-3-7.png",
+	"name": "Themis Earth Genesis (Level 7)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Themis"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Earth"
+	},
+		{
+			"trait_type": "Level",
+			"value": "7"
+	}
+	]
+}

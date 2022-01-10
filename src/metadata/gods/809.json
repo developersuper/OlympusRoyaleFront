@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #809",
+	"id": "809",
+	"image": "12-3-5.png",
+	"name": "Hermes Earth Genesis (Level 5)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Hermes"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Earth"
+	},
+		{
+			"trait_type": "Level",
+			"value": "5"
+	}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #821",
+	"id": "821",
+	"image": "6-1-5.png",
+	"name": "Dionysus Fire Genesis (Level 5)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Dionysus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Fire"
+	},
+		{
+			"trait_type": "Level",
+			"value": "5"
+	}
+	]
+}

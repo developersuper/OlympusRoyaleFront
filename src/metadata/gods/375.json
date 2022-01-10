@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #375",
+	"id": "375",
+	"image": "18-2-8.png",
+	"name": "Themis Lightning Genesis (Level 8)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Themis"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Lightning"
+	},
+		{
+			"trait_type": "Level",
+			"value": "8"
+	}
+	]
+}

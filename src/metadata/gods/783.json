@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #783",
+	"id": "783",
+	"image": "14-3-6.png",
+	"name": "Perseus Earth Genesis (Level 6)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Perseus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Earth"
+	},
+		{
+			"trait_type": "Level",
+			"value": "6"
+	}
+	]
+}

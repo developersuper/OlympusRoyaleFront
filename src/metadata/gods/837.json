@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #837",
+	"id": "837",
+	"image": "7-3-5.png",
+	"name": "Hades Earth Genesis (Level 5)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Hades"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Earth"
+	},
+		{
+			"trait_type": "Level",
+			"value": "5"
+	}
+	]
+}

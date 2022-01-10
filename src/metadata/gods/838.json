@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #838",
+	"id": "838",
+	"image": "18-5-8.png",
+	"name": "Themis Water Genesis (Level 8)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Themis"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Water"
+	},
+		{
+			"trait_type": "Level",
+			"value": "8"
+	}
+	]
+}

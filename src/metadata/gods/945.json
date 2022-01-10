@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #945",
+	"id": "945",
+	"image": "18-2-5.png",
+	"name": "Themis Lightning Genesis (Level 5)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Themis"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Lightning"
+	},
+		{
+			"trait_type": "Level",
+			"value": "5"
+	}
+	]
+}

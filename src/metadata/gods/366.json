@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #366",
+	"id": "366",
+	"image": "15-5-8.png",
+	"name": "Plutus Water Genesis (Level 8)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Plutus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Water"
+	},
+		{
+			"trait_type": "Level",
+			"value": "8"
+	}
+	]
+}

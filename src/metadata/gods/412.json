@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #412",
+	"id": "412",
+	"image": "3-3-5.png",
+	"name": "Artemis Earth Genesis (Level 5)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Artemis"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Earth"
+	},
+		{
+			"trait_type": "Level",
+			"value": "5"
+	}
+	]
+}

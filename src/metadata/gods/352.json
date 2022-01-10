@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #352",
+	"id": "352",
+	"image": "4-3-3.png",
+	"name": "Athena Earth Genesis (Level 3)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Athena"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Earth"
+	},
+		{
+			"trait_type": "Level",
+			"value": "3"
+	}
+	]
+}

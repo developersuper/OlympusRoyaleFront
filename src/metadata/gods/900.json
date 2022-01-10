@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #900",
+	"id": "900",
+	"image": "9-1-6.png",
+	"name": "Hephaestus Fire Genesis (Level 6)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Hephaestus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Fire"
+	},
+		{
+			"trait_type": "Level",
+			"value": "6"
+	}
+	]
+}

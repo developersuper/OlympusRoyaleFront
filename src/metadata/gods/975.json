@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #975",
+	"id": "975",
+	"image": "15-1-5.png",
+	"name": "Plutus Fire Genesis (Level 5)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Plutus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Fire"
+	},
+		{
+			"trait_type": "Level",
+			"value": "5"
+	}
+	]
+}

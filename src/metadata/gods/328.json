@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #328",
+	"id": "328",
+	"image": "11-4-10.png",
+	"name": "Hercules Arcane Genesis (Level 10)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Hercules"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Arcane"
+	},
+		{
+			"trait_type": "Level",
+			"value": "10"
+	}
+	]
+}

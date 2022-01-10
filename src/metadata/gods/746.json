@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #746",
+	"id": "746",
+	"image": "17-1-5.png",
+	"name": "Prometheus Fire Genesis (Level 5)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Prometheus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Fire"
+	},
+		{
+			"trait_type": "Level",
+			"value": "5"
+	}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #357",
+	"id": "357",
+	"image": "13-5-7.png",
+	"name": "Hestia Water Genesis (Level 7)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Hestia"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Water"
+	},
+		{
+			"trait_type": "Level",
+			"value": "7"
+	}
+	]
+}

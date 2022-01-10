@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #464",
+	"id": "464",
+	"image": "6-5-9.png",
+	"name": "Dionysus Water Genesis (Level 9)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Dionysus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Water"
+	},
+		{
+			"trait_type": "Level",
+			"value": "9"
+	}
+	]
+}

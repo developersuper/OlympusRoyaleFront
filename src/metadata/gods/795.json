@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #795",
+	"id": "795",
+	"image": "17-2-6.png",
+	"name": "Prometheus Lightning Genesis (Level 6)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Prometheus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Lightning"
+	},
+		{
+			"trait_type": "Level",
+			"value": "6"
+	}
+	]
+}

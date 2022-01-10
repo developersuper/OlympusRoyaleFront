@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #596",
+	"id": "596",
+	"image": "12-5-6.png",
+	"name": "Hermes Water Genesis (Level 6)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Hermes"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Water"
+	},
+		{
+			"trait_type": "Level",
+			"value": "6"
+	}
+	]
+}

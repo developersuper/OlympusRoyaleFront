@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #463",
+	"id": "463",
+	"image": "13-4-2.png",
+	"name": "Hestia Arcane Genesis (Level 2)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Hestia"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Arcane"
+	},
+		{
+			"trait_type": "Level",
+			"value": "2"
+	}
+	]
+}

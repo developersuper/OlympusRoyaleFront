@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #599",
+	"id": "599",
+	"image": "18-3-9.png",
+	"name": "Themis Earth Genesis (Level 9)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Themis"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Earth"
+	},
+		{
+			"trait_type": "Level",
+			"value": "9"
+	}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #459",
+	"id": "459",
+	"image": "7-5-8.png",
+	"name": "Hades Water Genesis (Level 8)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Hades"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Water"
+	},
+		{
+			"trait_type": "Level",
+			"value": "8"
+	}
+	]
+}

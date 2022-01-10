@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #572",
+	"id": "572",
+	"image": "19-4-8.png",
+	"name": "Zeus Arcane Genesis (Level 8)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Zeus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Arcane"
+	},
+		{
+			"trait_type": "Level",
+			"value": "8"
+	}
+	]
+}

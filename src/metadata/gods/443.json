@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #443",
+	"id": "443",
+	"image": "6-4-1.png",
+	"name": "Dionysus Arcane Genesis (Level 1)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Dionysus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Arcane"
+	},
+		{
+			"trait_type": "Level",
+			"value": "1"
+	}
+	]
+}

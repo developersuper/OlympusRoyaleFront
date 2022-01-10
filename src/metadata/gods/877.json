@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #877",
+	"id": "877",
+	"image": "11-3-8.png",
+	"name": "Hercules Earth Genesis (Level 8)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Hercules"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Earth"
+	},
+		{
+			"trait_type": "Level",
+			"value": "8"
+	}
+	]
+}

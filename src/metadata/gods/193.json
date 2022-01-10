@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #193",
+	"id": "193",
+	"image": "8-2-10.png",
+	"name": "Helios Lightning Genesis (Level 10)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Helios"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Lightning"
+	},
+		{
+			"trait_type": "Level",
+			"value": "10"
+	}
+	]
+}

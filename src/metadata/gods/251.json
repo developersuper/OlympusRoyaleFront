@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #251",
+	"id": "251",
+	"image": "9-2-2.png",
+	"name": "Hephaestus Lightning Genesis (Level 2)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Hephaestus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Lightning"
+	},
+		{
+			"trait_type": "Level",
+			"value": "2"
+	}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #368",
+	"id": "368",
+	"image": "19-3-4.png",
+	"name": "Zeus Earth Genesis (Level 4)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Zeus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Earth"
+	},
+		{
+			"trait_type": "Level",
+			"value": "4"
+	}
+	]
+}

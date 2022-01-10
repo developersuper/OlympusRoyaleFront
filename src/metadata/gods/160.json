@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #160",
+	"id": "160",
+	"image": "14-2-4.png",
+	"name": "Perseus Lightning Genesis (Level 4)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Perseus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Lightning"
+	},
+		{
+			"trait_type": "Level",
+			"value": "4"
+	}
+	]
+}

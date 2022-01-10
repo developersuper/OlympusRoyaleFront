@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #274",
+	"id": "274",
+	"image": "6-5-4.png",
+	"name": "Dionysus Water Genesis (Level 4)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Dionysus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Water"
+	},
+		{
+			"trait_type": "Level",
+			"value": "4"
+	}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #292",
+	"id": "292",
+	"image": "1-2-1.png",
+	"name": "Apollo Lightning Genesis (Level 1)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Apollo"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Lightning"
+	},
+		{
+			"trait_type": "Level",
+			"value": "1"
+	}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #637",
+	"id": "637",
+	"image": "16-5-8.png",
+	"name": "Poseidon Water Genesis (Level 8)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Poseidon"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Water"
+	},
+		{
+			"trait_type": "Level",
+			"value": "8"
+	}
+	]
+}

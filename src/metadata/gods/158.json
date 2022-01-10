@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #158",
+	"id": "158",
+	"image": "0-5-3.png",
+	"name": "Aphrodite Water Genesis (Level 3)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Aphrodite"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Water"
+	},
+		{
+			"trait_type": "Level",
+			"value": "3"
+	}
+	]
+}

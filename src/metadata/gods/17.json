@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #17",
+	"id": "17",
+	"image": "4-4-10.png",
+	"name": "Athena Arcane Genesis (Level 10)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Athena"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Arcane"
+	},
+		{
+			"trait_type": "Level",
+			"value": "10"
+	}
+	]
+}

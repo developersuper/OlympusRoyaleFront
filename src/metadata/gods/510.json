@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #510",
+	"id": "510",
+	"image": "1-1-7.png",
+	"name": "Apollo Fire Genesis (Level 7)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Apollo"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Fire"
+	},
+		{
+			"trait_type": "Level",
+			"value": "7"
+	}
+	]
+}

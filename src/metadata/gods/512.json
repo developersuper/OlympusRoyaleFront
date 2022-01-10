@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #512",
+	"id": "512",
+	"image": "18-5-10.png",
+	"name": "Themis Water Genesis (Level 10)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Themis"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Water"
+	},
+		{
+			"trait_type": "Level",
+			"value": "10"
+	}
+	]
+}

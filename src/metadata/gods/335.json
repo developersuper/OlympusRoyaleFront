@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #335",
+	"id": "335",
+	"image": "10-2-5.png",
+	"name": "Hera Lightning Genesis (Level 5)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Hera"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Lightning"
+	},
+		{
+			"trait_type": "Level",
+			"value": "5"
+	}
+	]
+}

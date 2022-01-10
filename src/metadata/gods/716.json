@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #716",
+	"id": "716",
+	"image": "9-5-4.png",
+	"name": "Hephaestus Water Genesis (Level 4)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Hephaestus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Water"
+	},
+		{
+			"trait_type": "Level",
+			"value": "4"
+	}
+	]
+}

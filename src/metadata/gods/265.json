@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #265",
+	"id": "265",
+	"image": "19-1-7.png",
+	"name": "Zeus Fire Genesis (Level 7)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Zeus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Fire"
+	},
+		{
+			"trait_type": "Level",
+			"value": "7"
+	}
+	]
+}

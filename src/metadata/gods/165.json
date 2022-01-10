@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #165",
+	"id": "165",
+	"image": "9-4-6.png",
+	"name": "Hephaestus Arcane Genesis (Level 6)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Hephaestus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Arcane"
+	},
+		{
+			"trait_type": "Level",
+			"value": "6"
+	}
+	]
+}

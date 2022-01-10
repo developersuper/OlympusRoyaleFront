@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #371",
+	"id": "371",
+	"image": "12-2-7.png",
+	"name": "Hermes Lightning Genesis (Level 7)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Hermes"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Lightning"
+	},
+		{
+			"trait_type": "Level",
+			"value": "7"
+	}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #630",
+	"id": "630",
+	"image": "2-5-2.png",
+	"name": "Ares Water Genesis (Level 2)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Ares"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Water"
+	},
+		{
+			"trait_type": "Level",
+			"value": "2"
+	}
+	]
+}

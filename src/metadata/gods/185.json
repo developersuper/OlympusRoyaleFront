@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #185",
+	"id": "185",
+	"image": "0-4-1.png",
+	"name": "Aphrodite Arcane Genesis (Level 1)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Aphrodite"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Arcane"
+	},
+		{
+			"trait_type": "Level",
+			"value": "1"
+	}
+	]
+}

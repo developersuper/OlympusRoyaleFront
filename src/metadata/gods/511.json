@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #511",
+	"id": "511",
+	"image": "19-2-10.png",
+	"name": "Zeus Lightning Genesis (Level 10)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Zeus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Lightning"
+	},
+		{
+			"trait_type": "Level",
+			"value": "10"
+	}
+	]
+}

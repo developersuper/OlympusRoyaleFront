@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #841",
+	"id": "841",
+	"image": "2-2-8.png",
+	"name": "Ares Lightning Genesis (Level 8)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Ares"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Lightning"
+	},
+		{
+			"trait_type": "Level",
+			"value": "8"
+	}
+	]
+}

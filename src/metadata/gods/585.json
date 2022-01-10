@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #585",
+	"id": "585",
+	"image": "11-4-7.png",
+	"name": "Hercules Arcane Genesis (Level 7)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Hercules"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Arcane"
+	},
+		{
+			"trait_type": "Level",
+			"value": "7"
+	}
+	]
+}

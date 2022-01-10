@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #784",
+	"id": "784",
+	"image": "17-5-6.png",
+	"name": "Prometheus Water Genesis (Level 6)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Prometheus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Water"
+	},
+		{
+			"trait_type": "Level",
+			"value": "6"
+	}
+	]
+}

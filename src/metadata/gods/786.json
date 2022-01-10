@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #786",
+	"id": "786",
+	"image": "19-2-9.png",
+	"name": "Zeus Lightning Genesis (Level 9)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Zeus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Lightning"
+	},
+		{
+			"trait_type": "Level",
+			"value": "9"
+	}
+	]
+}

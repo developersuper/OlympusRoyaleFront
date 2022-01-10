@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #170",
+	"id": "170",
+	"image": "11-2-5.png",
+	"name": "Hercules Lightning Genesis (Level 5)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Hercules"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Lightning"
+	},
+		{
+			"trait_type": "Level",
+			"value": "5"
+	}
+	]
+}

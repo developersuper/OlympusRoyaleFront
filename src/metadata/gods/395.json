@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #395",
+	"id": "395",
+	"image": "12-1-9.png",
+	"name": "Hermes Fire Genesis (Level 9)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Hermes"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Fire"
+	},
+		{
+			"trait_type": "Level",
+			"value": "9"
+	}
+	]
+}

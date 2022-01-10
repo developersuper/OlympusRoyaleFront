@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #711",
+	"id": "711",
+	"image": "15-2-1.png",
+	"name": "Plutus Lightning Genesis (Level 1)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Plutus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Lightning"
+	},
+		{
+			"trait_type": "Level",
+			"value": "1"
+	}
+	]
+}

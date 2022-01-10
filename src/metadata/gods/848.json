@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #848",
+	"id": "848",
+	"image": "17-4-1.png",
+	"name": "Prometheus Arcane Genesis (Level 1)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Prometheus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Arcane"
+	},
+		{
+			"trait_type": "Level",
+			"value": "1"
+	}
+	]
+}

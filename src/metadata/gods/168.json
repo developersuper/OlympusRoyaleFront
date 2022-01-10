@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #168",
+	"id": "168",
+	"image": "16-2-6.png",
+	"name": "Poseidon Lightning Genesis (Level 6)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Poseidon"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Lightning"
+	},
+		{
+			"trait_type": "Level",
+			"value": "6"
+	}
+	]
+}

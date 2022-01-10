@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #467",
+	"id": "467",
+	"image": "1-5-8.png",
+	"name": "Apollo Water Genesis (Level 8)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Apollo"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Water"
+	},
+		{
+			"trait_type": "Level",
+			"value": "8"
+	}
+	]
+}

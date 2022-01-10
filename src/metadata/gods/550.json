@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #550",
+	"id": "550",
+	"image": "5-5-10.png",
+	"name": "Demeter Water Genesis (Level 10)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Demeter"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Water"
+	},
+		{
+			"trait_type": "Level",
+			"value": "10"
+	}
+	]
+}

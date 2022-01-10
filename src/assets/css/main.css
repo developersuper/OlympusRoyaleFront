@@ -1,0 +1,418 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Vollkorn:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'opensans';
+  src: url('~@/assets/font/OpenSans-Bold.ttf')
+}
+
+@font-face {
+  font-family: 'guavacandy';
+  src: url('~@/assets/font/Guava-Candy.ttf')
+}
+
+.guavacandy {
+  font-family: guavacandy;
+  color: #7995B2;
+  top: 50%;
+  left: 47%;
+  font-size: 40px;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 1px 0px #1C1D1F, 1px 0 0px #1C1D1F, 1px 2px 1px #1C1D1F, 2px 1px 1px #1C1D1F, 2px 3px 2px #1C1D1F, 3px 2px 2px #1C1D1F, 3px 4px 2px #1C1D1F, 4px 3px 3px #1C1D1F, 4px 5px 3px #1C1D1F, 5px 4px 2px #1C1D1F, 5px 6px 2px #1C1D1F, 6px 5px 2px #1C1D1F, 6px 7px 1px #1C1D1F, 7px 6px 1px #1C1D1F, 7px 8px 0px #1C1D1F, 8px 7px 0px #1C1D1F, 2px 2px 2px rgba(28,29,31,0);
+}
+
+.guavacandy-click {
+  font-family: guavacandy;
+  color: #79F3FA;
+  top: 40%;
+  left: 45%;
+  font-size: 42px;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 1px 0px #1C1D1F, 1px 0 0px #1C1D1F, 1px 2px 1px #1C1D1F, 2px 1px 1px #1C1D1F, 2px 3px 2px #1C1D1F, 3px 2px 2px #1C1D1F, 3px 4px 2px #1C1D1F, 4px 3px 3px #1C1D1F, 4px 5px 3px #1C1D1F, 5px 4px 2px #1C1D1F, 5px 6px 2px #1C1D1F, 6px 5px 2px #1C1D1F, 6px 7px 1px #1C1D1F, 7px 6px 1px #1C1D1F, 7px 8px 0px #1C1D1F, 8px 7px 0px #1C1D1F, 2px 2px 2px rgba(28,29,31,0);
+}
+
+.guavacandy-click-1 {
+  font-family: guavacandy;
+  color: #79F3FA;
+  top: 40%;
+  left: 45%;
+  font-size: 42px;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 0 15px rgba(120,245,250,.5), 0 0 10px rgba(120,245,250,.5);;
+}
+
+body {
+  overflow-y: auto;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  padding: 0 2%;
+}
+
+.opensans {
+  font-family: opensans;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-family: "Vollkorn", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 3.875rem;
+  letter-spacing: -0.90625px;
+}
+
+h2 {
+  font-family: "Vollkorn", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  letter-spacing: -0.266667px;
+}
+
+h3 {
+  font-family: "Vollkorn", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.625rem;
+  line-height: 2rem;
+}
+
+h4 {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.147059px;
+}
+
+h5 {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  letter-spacing: 0.147059px;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.h-90 {
+  height: 100%;
+}
+
+.overline {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.caption {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.4px;
+}
+
+button,
+.button {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.4px;
+}
+
+/* Custom CSS */
+.stone-holder {
+  width: 100%;
+  height: 17px;
+  background-size: 100% 100%;
+  background-position: center;
+  background: url("~@/assets/stone-holder.png");
+}
+
+.battle-btn {
+  font-size: 14px;
+  color: #081a2e;
+  background-color: #069db5;
+  border-radius: 99px;
+  border: 3px solid #65cdee;
+  padding: 10px 35px;
+  font-weight: 900;
+}
+
+.battle-btn-disable {
+  font-size: 14px;
+  color: #959dc7 !important;
+  background-color: #464468;
+  border-radius: 99px;
+  border: 3px solid #959dc7;
+  padding: 10px 35px;
+  font-weight: 900;
+}
+
+/* .exchange-btn {
+  font-size: 14px;
+  color: white;
+  background-color: #069db5;
+  border-radius: 99px;
+  border: 3px solid #65cdee;
+  padding: 10px 35px;
+  font-weight: 900;
+  box-shadow: 0 0 20px 1px rgb(6 157 181);
+} */
+
+.exchange-btn {
+  font-size: 14px;
+  color: #959dc7 !important;
+  background-color: #464468;
+  border-radius: 99px;
+  border: 3px solid #959dc7;
+  padding: 10px 35px;
+  font-weight: 900;
+  /* box-shadow: 0 0 20px 1px rgb(6 157 181); */
+}
+
+
+/* .mint-btn {
+  font-size: 14px;
+  background-color: #069db5;
+  border-radius: 99px;
+  border: 3px solid #65cdee;
+  padding: 10px 35px;
+  font-weight: 900;
+  margin-top: -3rem;
+  box-shadow: 3px 5px 20px 2px rgb(6 157 181);
+  transition: all .3s;
+} */
+
+.mint-btn {
+  color: #959dc7 !important;
+  font-size: 14px;
+  background-color: #464468;
+  border-radius: 99px;
+  border: 3px solid #959dc7;
+  padding: 10px 35px;
+  font-weight: 900;
+  margin-top: -3rem;
+  transition: all .3s;
+}
+
+
+.trade-btn {
+  font-size: 14px;
+  background-color: #069db5;
+  border-radius: 10px;
+  border: 2px solid #65cdee;
+  padding: 10px 35px;
+  font-weight: 900;
+  box-shadow: 0px 0px 10px 2px rgb(6 157 181);
+  transition: all .3s;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.right-15 {
+  right: 3.75rem;
+}
+
+.green {
+  color: #0bf96a;
+}
+
+.red {
+  color: #cc2b2e;
+}
+
+.card-status-color {
+  color: #16b3c5;
+}
+
+.top-50pc {
+  top: 46%;
+}
+
+.shadow-power {
+  text-shadow: 2px 2px 17px rgb(92 200 240);
+}
+
+.mint-bg {
+  background-size: 100% 100% !important;
+  background: url("~@/assets/mint-bg.png");
+}
+
+.buyer-bg {
+  background-size: 100% 100% !important;
+  background: url("~@/assets/buyer-bg.png");
+}
+
+.toggle-bg {
+  background-size: 100% 100% !important;
+  background: url("~@/assets/toggle/toggle-bg.png");
+  width: 320px;
+  height: 100px;
+}
+
+.toggle-btn {
+  width: 43%;
+}
+
+.scale-101 {
+  transform: scale(1.02);
+}
+
+.symbol-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.scrollY {
+  overflow: scroll;
+}
+/* @media (min-width: 414px) {
+  .trade-btn {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+} */
+
+@media (min-width: 768px) {
+  .toggle-bg {
+    width: 500px;
+    height: 150px;
+  }
+  .toggle-btn {
+    width: 44%;
+  }
+  .h-90 {
+    height: 97%;
+  }
+}
+
+.battle-btn:hover, .mint-btn:hover, .exchange-btn:hover {
+  box-shadow: 0 0 30px 4px rgb(6 157 181);
+}
+
+.trade-btn:hover {
+  box-shadow: 0 2px 20px 4px rgb(6 157 181);
+}
+
+.battle-type:hover {
+  box-shadow: 5px 5px 30px 1px rgb(6 157 181);
+}
+
+.nft-cards:hover, .nft-cards:focus {
+  box-shadow: 1px 1px 20px 1px rgb(6 157 181);
+}
+
+@media all and (max-width: 767px) {
+  .stone-holder {
+    width: 100%;
+    background-size: 100% 100%;
+  }
+
+  .mobile {
+    display: none;
+  }
+}
+
+@media all and (max-width: 640px) {
+  .guavacandy {
+    font-size: 23px;
+  }
+  .guavacandy-click {
+    font-size: 25px;
+  }
+  .guavacandy-click-1 {
+    font-size: 25px;
+  }
+}
+
+/* ---end--- */
+
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1466px;
+  }
+}
+
+/* Hide reveal animations on initial load to stop flashing */
+.wow {
+  visibility: hidden;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border: solid 3px transparent;
+  box-shadow: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 24px;
+  border: solid 3px transparent;
+  box-shadow: inset 0 0 10px 10px #3bd0f5;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  box-shadow: inset 0 0 10px 10px #3bd0f5;
+}
+
+::-webkit-scrollbar-corner {
+  background: rgba(0, 0, 0, 0);
+}
+
+.fade-in {
+  animation: fadeIn 0.5s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.tippy-box[data-theme~="olympus"] {
+  background-color: #0E2641;
+  color: #CCD7E9;
+  border-radius: 4px;
+  padding: 8px 12px;
+  line-height: 1.5;
+  font-size: 13px;
+  text-transform: none;
+  border: 1px solid #1D344E;
+  max-width: 240px;
+}

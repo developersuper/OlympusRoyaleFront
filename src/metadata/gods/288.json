@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #288",
+	"id": "288",
+	"image": "13-1-5.png",
+	"name": "Hestia Fire Genesis (Level 5)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Hestia"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Fire"
+	},
+		{
+			"trait_type": "Level",
+			"value": "5"
+	}
+	]
+}

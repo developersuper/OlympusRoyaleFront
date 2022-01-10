@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #544",
+	"id": "544",
+	"image": "0-4-10.png",
+	"name": "Aphrodite Arcane Genesis (Level 10)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Aphrodite"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Arcane"
+	},
+		{
+			"trait_type": "Level",
+			"value": "10"
+	}
+	]
+}

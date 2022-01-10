@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #254",
+	"id": "254",
+	"image": "5-2-5.png",
+	"name": "Demeter Lightning Genesis (Level 5)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Demeter"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Lightning"
+	},
+		{
+			"trait_type": "Level",
+			"value": "5"
+	}
+	]
+}

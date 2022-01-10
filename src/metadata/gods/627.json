@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #627",
+	"id": "627",
+	"image": "11-1-1.png",
+	"name": "Hercules Fire Genesis (Level 1)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Hercules"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Fire"
+	},
+		{
+			"trait_type": "Level",
+			"value": "1"
+	}
+	]
+}

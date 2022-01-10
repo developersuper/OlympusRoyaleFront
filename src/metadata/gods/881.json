@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #881",
+	"id": "881",
+	"image": "3-2-7.png",
+	"name": "Artemis Lightning Genesis (Level 7)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Artemis"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Lightning"
+	},
+		{
+			"trait_type": "Level",
+			"value": "7"
+	}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #126",
+	"id": "126",
+	"image": "0-3-4.png",
+	"name": "Aphrodite Earth Genesis (Level 4)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Aphrodite"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Earth"
+	},
+		{
+			"trait_type": "Level",
+			"value": "4"
+	}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #927",
+	"id": "927",
+	"image": "4-5-9.png",
+	"name": "Athena Water Genesis (Level 9)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Athena"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Water"
+	},
+		{
+			"trait_type": "Level",
+			"value": "9"
+	}
+	]
+}

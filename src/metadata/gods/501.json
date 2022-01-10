@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #501",
+	"id": "501",
+	"image": "2-4-7.png",
+	"name": "Ares Arcane Genesis (Level 7)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Ares"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Arcane"
+	},
+		{
+			"trait_type": "Level",
+			"value": "7"
+	}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #294",
+	"id": "294",
+	"image": "18-5-7.png",
+	"name": "Themis Water Genesis (Level 7)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Themis"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Water"
+	},
+		{
+			"trait_type": "Level",
+			"value": "7"
+	}
+	]
+}

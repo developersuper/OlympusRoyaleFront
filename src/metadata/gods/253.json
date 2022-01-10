@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #253",
+	"id": "253",
+	"image": "8-2-6.png",
+	"name": "Helios Lightning Genesis (Level 6)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Helios"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Lightning"
+	},
+		{
+			"trait_type": "Level",
+			"value": "6"
+	}
+	]
+}

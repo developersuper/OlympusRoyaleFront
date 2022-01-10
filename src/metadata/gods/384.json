@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #384",
+	"id": "384",
+	"image": "13-3-1.png",
+	"name": "Hestia Earth Genesis (Level 1)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Hestia"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Earth"
+	},
+		{
+			"trait_type": "Level",
+			"value": "1"
+	}
+	]
+}

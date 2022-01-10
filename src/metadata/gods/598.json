@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #598",
+	"id": "598",
+	"image": "19-5-10.png",
+	"name": "Zeus Water Genesis (Level 10)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Zeus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Water"
+	},
+		{
+			"trait_type": "Level",
+			"value": "10"
+	}
+	]
+}

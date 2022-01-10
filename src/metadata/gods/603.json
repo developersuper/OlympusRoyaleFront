@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #603",
+	"id": "603",
+	"image": "6-1-6.png",
+	"name": "Dionysus Fire Genesis (Level 6)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Dionysus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Fire"
+	},
+		{
+			"trait_type": "Level",
+			"value": "6"
+	}
+	]
+}

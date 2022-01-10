@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #655",
+	"id": "655",
+	"image": "3-5-7.png",
+	"name": "Artemis Water Genesis (Level 7)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Artemis"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Water"
+	},
+		{
+			"trait_type": "Level",
+			"value": "7"
+	}
+	]
+}

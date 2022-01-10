@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #162",
+	"id": "162",
+	"image": "18-2-6.png",
+	"name": "Themis Lightning Genesis (Level 6)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Themis"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Lightning"
+	},
+		{
+			"trait_type": "Level",
+			"value": "6"
+	}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #41",
+	"id": "41",
+	"image": "1-4-7.png",
+	"name": "Apollo Arcane Genesis (Level 7)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Apollo"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Arcane"
+	},
+		{
+			"trait_type": "Level",
+			"value": "7"
+	}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #145",
+	"id": "145",
+	"image": "15-4-5.png",
+	"name": "Plutus Arcane Genesis (Level 5)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Plutus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Arcane"
+	},
+		{
+			"trait_type": "Level",
+			"value": "5"
+	}
+	]
+}

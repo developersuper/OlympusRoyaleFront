@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #152",
+	"id": "152",
+	"image": "5-1-1.png",
+	"name": "Demeter Fire Genesis (Level 1)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Demeter"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Fire"
+	},
+		{
+			"trait_type": "Level",
+			"value": "1"
+	}
+	]
+}

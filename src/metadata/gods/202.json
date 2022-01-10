@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #202",
+	"id": "202",
+	"image": "14-5-6.png",
+	"name": "Perseus Water Genesis (Level 6)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Perseus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Water"
+	},
+		{
+			"trait_type": "Level",
+			"value": "6"
+	}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #189",
+	"id": "189",
+	"image": "18-4-10.png",
+	"name": "Themis Arcane Genesis (Level 10)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Themis"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Arcane"
+	},
+		{
+			"trait_type": "Level",
+			"value": "10"
+	}
+	]
+}

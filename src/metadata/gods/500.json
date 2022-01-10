@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #500",
+	"id": "500",
+	"image": "5-4-2.png",
+	"name": "Demeter Arcane Genesis (Level 2)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Demeter"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Arcane"
+	},
+		{
+			"trait_type": "Level",
+			"value": "2"
+	}
+	]
+}

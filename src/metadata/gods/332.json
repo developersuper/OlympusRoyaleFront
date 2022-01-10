@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #332",
+	"id": "332",
+	"image": "18-1-4.png",
+	"name": "Themis Fire Genesis (Level 4)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Themis"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Fire"
+	},
+		{
+			"trait_type": "Level",
+			"value": "4"
+	}
+	]
+}

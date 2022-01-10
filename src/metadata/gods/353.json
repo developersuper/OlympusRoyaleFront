@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #353",
+	"id": "353",
+	"image": "6-2-6.png",
+	"name": "Dionysus Lightning Genesis (Level 6)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Dionysus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Lightning"
+	},
+		{
+			"trait_type": "Level",
+			"value": "6"
+	}
+	]
+}

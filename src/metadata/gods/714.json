@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #714",
+	"id": "714",
+	"image": "6-3-8.png",
+	"name": "Dionysus Earth Genesis (Level 8)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Dionysus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Earth"
+	},
+		{
+			"trait_type": "Level",
+			"value": "8"
+	}
+	]
+}

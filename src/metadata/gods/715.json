@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #715",
+	"id": "715",
+	"image": "7-2-1.png",
+	"name": "Hades Lightning Genesis (Level 1)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Hades"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Lightning"
+	},
+		{
+			"trait_type": "Level",
+			"value": "1"
+	}
+	]
+}

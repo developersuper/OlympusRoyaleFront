@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #187",
+	"id": "187",
+	"image": "0-2-10.png",
+	"name": "Aphrodite Lightning Genesis (Level 10)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Aphrodite"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Lightning"
+	},
+		{
+			"trait_type": "Level",
+			"value": "10"
+	}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #683",
+	"id": "683",
+	"image": "4-1-4.png",
+	"name": "Athena Fire Genesis (Level 4)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Athena"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Fire"
+	},
+		{
+			"trait_type": "Level",
+			"value": "4"
+	}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #18",
+	"id": "18",
+	"image": "9-1-4.png",
+	"name": "Hephaestus Fire Genesis (Level 4)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Hephaestus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Fire"
+	},
+		{
+			"trait_type": "Level",
+			"value": "4"
+	}
+	]
+}

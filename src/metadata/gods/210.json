@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #210",
+	"id": "210",
+	"image": "19-5-2.png",
+	"name": "Zeus Water Genesis (Level 2)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Zeus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Water"
+	},
+		{
+			"trait_type": "Level",
+			"value": "2"
+	}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #622",
+	"id": "622",
+	"image": "6-4-7.png",
+	"name": "Dionysus Arcane Genesis (Level 7)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Dionysus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Arcane"
+	},
+		{
+			"trait_type": "Level",
+			"value": "7"
+	}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #819",
+	"id": "819",
+	"image": "14-1-1.png",
+	"name": "Perseus Fire Genesis (Level 1)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Perseus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Fire"
+	},
+		{
+			"trait_type": "Level",
+			"value": "1"
+	}
+	]
+}

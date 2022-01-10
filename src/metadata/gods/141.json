@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #141",
+	"id": "141",
+	"image": "4-3-9.png",
+	"name": "Athena Earth Genesis (Level 9)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Athena"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Earth"
+	},
+		{
+			"trait_type": "Level",
+			"value": "9"
+	}
+	]
+}

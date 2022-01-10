@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #146",
+	"id": "146",
+	"image": "19-3-3.png",
+	"name": "Zeus Earth Genesis (Level 3)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Zeus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Earth"
+	},
+		{
+			"trait_type": "Level",
+			"value": "3"
+	}
+	]
+}

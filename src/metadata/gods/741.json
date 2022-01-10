@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #741",
+	"id": "741",
+	"image": "8-5-8.png",
+	"name": "Helios Water Genesis (Level 8)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Helios"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Water"
+	},
+		{
+			"trait_type": "Level",
+			"value": "8"
+	}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #932",
+	"id": "932",
+	"image": "10-4-10.png",
+	"name": "Hera Arcane Genesis (Level 10)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Hera"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Arcane"
+	},
+		{
+			"trait_type": "Level",
+			"value": "10"
+	}
+	]
+}

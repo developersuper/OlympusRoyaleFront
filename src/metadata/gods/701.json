@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #701",
+	"id": "701",
+	"image": "17-3-6.png",
+	"name": "Prometheus Earth Genesis (Level 6)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Prometheus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Earth"
+	},
+		{
+			"trait_type": "Level",
+			"value": "6"
+	}
+	]
+}

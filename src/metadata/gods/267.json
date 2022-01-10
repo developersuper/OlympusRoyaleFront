@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #267",
+	"id": "267",
+	"image": "14-4-4.png",
+	"name": "Perseus Arcane Genesis (Level 4)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Perseus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Arcane"
+	},
+		{
+			"trait_type": "Level",
+			"value": "4"
+	}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #695",
+	"id": "695",
+	"image": "5-3-6.png",
+	"name": "Demeter Earth Genesis (Level 6)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Demeter"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Earth"
+	},
+		{
+			"trait_type": "Level",
+			"value": "6"
+	}
+	]
+}

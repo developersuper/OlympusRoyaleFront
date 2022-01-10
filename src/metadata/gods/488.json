@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #488",
+	"id": "488",
+	"image": "8-1-6.png",
+	"name": "Helios Fire Genesis (Level 6)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Helios"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Fire"
+	},
+		{
+			"trait_type": "Level",
+			"value": "6"
+	}
+	]
+}

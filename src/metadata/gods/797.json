@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #797",
+	"id": "797",
+	"image": "4-2-1.png",
+	"name": "Athena Lightning Genesis (Level 1)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Athena"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Lightning"
+	},
+		{
+			"trait_type": "Level",
+			"value": "1"
+	}
+	]
+}

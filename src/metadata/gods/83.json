@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #83",
+	"id": "83",
+	"image": "17-1-8.png",
+	"name": "Prometheus Fire Genesis (Level 8)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Prometheus"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Fire"
+	},
+		{
+			"trait_type": "Level",
+			"value": "8"
+	}
+	]
+}

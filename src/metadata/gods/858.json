@@ -1,0 +1,20 @@
+{
+	"description": "Olympus genesis collection #858",
+	"id": "858",
+	"image": "16-4-10.png",
+	"name": "Poseidon Arcane Genesis (Level 10)",
+	"attributes": [
+		{
+			"trait_type": "God",
+			"value": "Poseidon"
+	},
+		{
+			"trait_type": "Enchant",
+			"value": "Arcane"
+	},
+		{
+			"trait_type": "Level",
+			"value": "10"
+	}
+	]
+}
