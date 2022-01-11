@@ -1,6 +1,7 @@
 import { createStore } from "vuex";
 
 import wallet from "@/store/wallet.js";
+import cards from "@/store/cards.js";
 import Web3 from "web3";
 import {RPC} from "@/js/constants";
 import {getBNBPrice} from "@/js/utilities";
@@ -8,6 +9,7 @@ import {getBNBPrice} from "@/js/utilities";
 export default createStore({
     modules: {
         wallet,
+        cards,
     },
     state: {
         initialization: null,

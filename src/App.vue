@@ -12,6 +12,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 import Navbar from "@/components/Navbar.vue";
 import Footer from "@/components/Footer.vue";
 import Logo from "@/components/Logo.vue";
@@ -26,6 +28,15 @@ export default {
     Menu,
     Background,
   },
+  methods: {
+    ...mapActions('cards',[
+      'loadCards'
+    ])
+  },
+  async mounted() {
+    await this.loadCards();
+    console.log('loading...');
+  }
 };
 </script>
 

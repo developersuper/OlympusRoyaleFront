@@ -8,6 +8,9 @@ import OlympusCollecter from "@/web3/abi/OlympusCollecter.json";
 import OlympusRoyaleStats from "@/web3/abi/OlympusRoyaleStats.json";
 import OlympusBattle from "@/web3/abi/OlympusBattle.json";
 import { getCurrentNetwork } from "@/web3/index";
+import axios from 'axios';
+
+const SERVER = "https://infinite-sierra-48462.herokuapp.com/nft";
 
 const NFT_TESTNET = "0xfe5E9923152453e9bE792FFD01f8420b6728636F";
 // const NFT_TESTNET = "0x5ad1963418A9E8803731e6feE12028b4e4170a99";
@@ -180,3 +183,60 @@ export async function getJsonForGods(i) {
 export async function getJsonForBounties(i) {
 	return "https://bafybeigg7bvg2rlcxk3eh65uuku3zpd7qegssyu7dgv6djidlpe6jvzszy.ipfs.dweb.link/" + i + ".json";
 }
+
+export async function getGods() {
+	try{
+		const result = await axios.get(`${SERVER}/gods/all`);
+		return result.data;
+	}catch(e) {
+		console.log('Error occured', e);
+		return [];
+	}
+}
+
+export async function getMyGods(wallet, gods) {
+	try{
+		const nfts = await getNftsOf(wallet);
+		const myGods = gods.filter((god) => nfts.indexOf(god.id) >= 0);
+		return myGods;
+	}catch(e) {
+		console.log('Error occured', e);
+		return [];
+	}
+}
+
+export async function getBounties() {
+	try{
+		const result = await axios.get(`${SERVER}/bounties/all`);
+		return result.data;
+	}catch(e) {
+		console.log('Error occured', e);
+		return [];
+	}
+}
+
+export async function getMyBounties(wallet, bounties) {
+	try{
+		const nfts = await getBountiesOf(this.wallet);
+		const myBounties = bounties.filter((bounty) => nfts.indexOf(bounty) >= 0);
+		return myBounties;
+	}catch(e) {
+		console.log('Error occured', e);
+		return [];
+	}
+}
+
+export async function getSoldiers() {
+	try{
+		const result = await axios.get(`${SERVER}/soldiers/all`);
+		return result.data;
+	}catch(e) {
+		console.log('Error occured', e);
+		return [];
+	}
+}
+
+export async function getMySoldiers() {
+	return [];
+}
+

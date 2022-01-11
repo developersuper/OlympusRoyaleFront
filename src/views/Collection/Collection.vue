@@ -131,57 +131,39 @@
       
     </div>
   </span>
-
-  <div v-if="filteredCards[1].length" class="flex flex-wrap overflow-visible wow fadeInDown" data-wow-duration=".6s" data-wow-delay=".55s">
-    <!-- <div 
-      :class="[
-        showBounties ? 'block' : 'hidden',
-        'font-heading fade-in px-4 pb-4 text-sm flex xl:w-1/2 w-full justify-between'
-      ]" 
-      v-for="card in this.bountyData" v-bind:key="card"
-    >
-      <div class="bg-gray-900 border rounded-3xl border-gray-700 w-full h-90 p-4 nft-cards wow flipInX" data-wow-duration="1s" data-wow-delay=".55s">
-        <img class="w-full h-3/4 mb-2 sm:mb-4 rounded-3xl p-2" :src="card.image" alt="" />
-        <h4 class="font-heading text-lg text-white flex justify-center text-center opensans">{{ card.name }}</h4>
-        <span class="text-base sm:text-xl font-bold shadow-power text-white flex justify-center">RARITY: A+ (1 OF 1000)</span>
-        <div class="flex flex-row justify-center">
-          <p class="mt-2 text-locker_primary font-semibold text-base"><span>VIEW</span> / <span><a href="https://lootex.io/stores/olympus-royale" target="_blank">TRADE</a></span></p>
-          <i class="py-2 text-base fa fa-heart text-gray-300"> 73</i>
-        </div>
-        <button @click="showPopup = card.id" class="border border-gray-700 text-gray-400 mt-3 hover:border-gray-600 hover:text-gray-300 duration-200 transition-colors py-2 rounded-md w-full">View</button>
-      </div>
-    </div> -->
-    <div class="font-heading fade-in px-4 pb-4 text-sm flex 2xl:w-1/4 xl:w-1/3 md:w-1/2 w-full h-auto justify-between" v-for="card in filteredCards[0]" v-bind:key="card">
-      <popup 
-        v-bind:cards="filteredCards[0]"
-        v-bind:id="card.id" 
-        v-bind:name="card.name" 
-        v-bind:image="card.image"
-        v-bind:video="card.video"  
-        v-bind:level="card.level" 
-        v-bind:power="card.power" 
-        v-bind:attack="card.attack" 
-        v-bind:defense="card.defense"
-        v-bind:vitality="card.vitality"
-        v-bind:speed="card.speed"
-        v-bind:win="card.win"
-        v-bind:lost="card.lost"
-      @close="showPopup = false" 
-      v-if="showPopup == card.id"
-      >
-      </popup>
-      <div class="bg-gray-900 border rounded-3xl border-gray-bc w-full px-4 pt-4 pb-2 nft-cards cursor-pointer wow flipInX" data-wow-duration="1s" data-wow-delay=".55s">
-        <img class="w-full -mb-2" :src="card.image" @click="toView(card.id)" alt="" />
-        <p v-if="card.collection == 'God'" class="text-center text-lg text-white flex justify-center opensans leading-6">{{ card.name.slice(0, -10) }} <br /> Level {{ card.level }} </p>
-        <p v-if="card.collection == 'Bounty'" class="text-center mt-8 text-lg text-white flex justify-center opensans">{{ card.name }} </p>
-        <p v-if="card.collection == 'Bounty'" class="text-base sm:text-xl font-bold shadow-power text-white flex justify-center">RARITY: S+ (1 OF 1)</p>
-        <span v-if="card.collection == 'God'" class="text-base sm:text-xl font-bold shadow-power text-white flex justify-center">POWER: {{ card.power }}</span>
-        <div class="flex flex-row justify-center">
-          <p class="mt-1 text-locker_primary font-semibold text-base"><span class="cursor-pointer" @click="toView(card.id)">VIEW</span> / <span><a href="https://lootex.io/stores/olympus-royale" target="_blank">TRADE</a></span></p>
-        </div>
-      </div>
-    </div>
-  </div>
+      <Suspense>
+        <template #default>
+          <div v-if="filteredCards[1].length" class="flex flex-wrap overflow-visible wow fadeInDown" data-wow-duration=".6s" data-wow-delay=".55s">
+            <div class="font-heading fade-in px-4 pb-4 text-sm flex 2xl:w-1/4 xl:w-1/3 md:w-1/2 w-full h-auto justify-between" v-for="card in filteredCards[0]" v-bind:key="card">
+              <popup 
+                v-bind:cards="filteredCards[0]"
+                v-bind:id="card.id" 
+                v-bind:name="card.name" 
+                v-bind:image="card.image"
+                v-bind:video="card.video"  
+                v-bind:level="card.level" 
+                v-bind:power="card.power" 
+                v-bind:attack="card.attack" 
+                v-bind:defense="card.defense"
+                v-bind:vitality="card.vitality"
+                v-bind:speed="card.speed"
+                v-bind:win="card.win"
+                v-bind:lost="card.lost"
+                @close="showPopup = false" 
+                v-if="showPopup == card.id"
+              >
+              </popup>
+              <card
+                :card="card"
+                @to-view="toView(card.id)"
+              />
+            </div>
+          </div>
+      </template>
+    <template #fallback>
+      Loading...
+    </template>
+  </Suspense>
 
   <div v-if="filteredCards[1].length" class="flex flex-row mx-auto place-content-center text-sm sm:text-lg text-gray-200 font-bold my-4">
     NFT'S PER PAGE: 
@@ -296,23 +278,29 @@
 
 <script>
 import { getAccount } from "@/web3/index";
-import { getNftsOf, getBountiesOf, 
-getTotalGodsNFT,
-getTotalBounties,
-getStatsRoyaleCards,
-getJsonForGods,
-getJsonForBounties,
-getPrevWIns,
-getPrevDefeats
+import { 
+  getNftsOf, 
+  getBountiesOf, 
+  getTotalGodsNFT,
+  getTotalBounties,
+  getStatsRoyaleCards,
+  getJsonForGods,
+  getJsonForBounties,
+  getPrevWIns,
+  getPrevDefeats
 } from "@/web3/nft";
 import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from "@headlessui/vue";
 import { CheckIcon, SelectorIcon } from "@heroicons/vue/solid";
 import Popup from "./components/Popup.vue";
 import { ref } from "vue";
+import { mapGetters } from 'vuex';
 import { useSound } from '@vueuse/sound'
+
 import buttonSfx from '@/assets/sound/click.mp3'
 import modalSfx from '@/assets/sound/modal.wav'
 import paginationSfx from '@/assets/sound/pagination.wav'
+
+import Card from './components/Card.vue';
 
 const tokens = [
   {
@@ -388,6 +376,7 @@ export default {
     ListboxOptions,
     CheckIcon,
     SelectorIcon,
+    Card,
   },
   setup() {
     const selectedSortBy = ref(tokens[0]);
@@ -471,18 +460,6 @@ export default {
         .catch(err => {
             throw err
         });
-        // const card = require("@/metadata/bounties/" + i + ".json");
-        // this.cards.push({
-        //   id: i+1,
-        //   name: card.name,
-        //   image: "https://user-images.githubusercontent.com/81764479/148542476-d57fa6fb-2ff7-44a4-8553-6c8fd08edd58.png",
-        //   video: card.video,
-        //   owner: "",
-        //   rarity: 1,
-        //   value: "??? OLYMPUS",
-        //   collection: card.attributes[0].trait_type,// gods, soldiers or bounties
-        //   mediaType: card.media, // video or image
-        // });
       }
     },
     async getAllGodsNfts() {
@@ -518,27 +495,6 @@ export default {
           .catch(err => {
               throw err
           });
-        // const card = require("@/metadata/gods/" + i + ".json");
-        // this.cards.push({
-        //   id: i + Number(addNo) + 1,
-        //   name: card.name,
-        //   image: card.image.replace("play.olympustoken.io/", "bafybeig6iusafwgftccirnxffy32zw2cy6kmvmd6z4sqwpheiuc7e5yx6i").replace("img/", ".ipfs").replace("nfts/", ".dweb.link/"),
-        //   owner: "",
-        //   rarity: 1,
-        //   value: "??? OLYMPUS",
-        //   power: stats.attack + stats.defence + stats.hp + stats.speed,
-        //   level: card.attributes[2].value,
-        //   attack: stats.attack,
-        //   defense: stats.defence,
-        //   vitality: stats.hp,
-        //   speed: stats.speed,
-        //   win: wins,
-        //   lost: defeats,
-        //   collection: card.attributes[0].trait_type
-        //   //collection: card.type, // gods, soldiers or bounties
-        //   //mediaType: card.media, // video or image
-        //   //video: card.video,
-        // });
       }
     },
     toView(e) {
@@ -658,6 +614,12 @@ export default {
     },
   },
   computed: {
+    ...mapGetters('cards', [
+      'gods',
+      'bounties',
+      'myGods',
+      'myBounties'
+    ]),
     filteredCards() {
       let tempCards = this.cards;
 
