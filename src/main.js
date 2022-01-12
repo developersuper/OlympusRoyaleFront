@@ -7,7 +7,7 @@ import Donut from "vue-css-donut-chart";
 import "vue-css-donut-chart/dist/vcdonut.css";
 import Vue3VideoPlayer from '@cloudgeek/vue3-video-player'
 import '@cloudgeek/vue3-video-player/dist/vue3-video-player.css'
-
+import VueLazyLoad from 'vue3-lazyload'
 import "tippy.js/animations/shift-toward-subtle.css";
 
 import "./assets/css/main.css";
@@ -27,4 +27,5 @@ createApp(App)
   .use(Vue3VideoPlayer)
   .use(VueTippy)
   .use(Donut)
+  .use(VueLazyLoad)
   .mount("#app");

@@ -3,7 +3,20 @@ import {
     getBounties,
     getMyGods,
     getMyBounties,
-  } from "@/web3/nft";
+} from "@/web3/nft";
+
+const stats = [
+    [15, 15, 15, 3],
+    [20, 20, 20, 5],
+    [25, 25, 25, 7],
+    [30, 30, 30, 9],
+    [35, 35, 35, 11],
+    [40, 40, 40, 13],
+    [45, 45, 45, 15],
+    [50, 50, 50, 17],
+    [55, 55, 55, 19],
+    [60, 60, 60, 21],
+]
 
 export default {
     namespaced: true,
@@ -21,9 +34,12 @@ export default {
         },
         setGods(state, gods) {
             state.gods = gods.map((god) => {
+                let level = parseInt(god.attributes[2].value);
                 return {
                     ...god,
-                    image: 'https://bafybeig6iusafwgftccirnxffy32zw2cy6kmvmd6z4sqwpheiuc7e5yx6i.ipfs.dweb.link/' + god.image,
+                    level,
+                    stats: [...stats[level - 1]],
+                    power: (stats[level-1][0] + stats[level-1][1] + stats[level-1][2] + stats[level-1][3]) * 100,
                 }
             });
         },
@@ -92,7 +108,7 @@ export default {
         },
     },
     actions: {
-        async loadCards({ getters, commit }) {
+        async loadCards({ commit }) {
             const gods = await getGods();
             commit('setGods', gods);
 
@@ -101,9 +117,6 @@ export default {
 
             // const soldiers = await getSoldiers();
             // commit('setSoliders', soldiers);
-
-            console.log('loaded loadCards...', getters.gods, getters.bounties);
-
         },
         async loadMyCards({ getters, commit, rootState }) {
             const wallet = rootState.wallet.address;
@@ -116,8 +129,6 @@ export default {
 
             // const mySoldiers = await getMySoldiers(wallet, soldiers);
             // commit('setMySoldiers', mySoldiers);
-
-            console.log('loaded myCards...');
         }
     }
 }

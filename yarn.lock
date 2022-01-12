@@ -11281,6 +11281,11 @@ vue-tippy@^6.0.0-alpha.32:
   dependencies:
     tippy.js "^6.3.7"
 
+vue3-lazyload@^0.2.5-beta:
+  version "0.2.5-beta"
+  resolved "https://registry.yarnpkg.com/vue3-lazyload/-/vue3-lazyload-0.2.5-beta.tgz#cf81237cd487ce14aa7c21af8bfd8b83fc1f5360"
+  integrity sha512-GVhJfL9Hcu+AvWsYmUwODivvt+gzpT0ztgAzZaUduoiTaGCv/qzhr0VwAQXfjGF3XFYFyOJsHlAi3/WE0P8XTQ==
+
 vue3-popper@^1.2.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/vue3-popper/-/vue3-popper-1.4.1.tgz#4fb4c67928acff0f671709a07ae7af6723f8e6c5"

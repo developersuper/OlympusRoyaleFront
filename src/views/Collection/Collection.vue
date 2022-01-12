@@ -100,6 +100,7 @@
   </div>
 
   <Pagination 
+    v-if="filteredCards[1].length"
     :totalLength="filteredCards[1].length"
     :currentPage="page"
     :perPage="perPage"
@@ -108,7 +109,7 @@
     @updatePerPage="onChangePageInfo($event, 'perPage')"
   />
 
-  <div class="flex place-content-center">
+  <div v-else class="flex place-content-center">
     <div class="text-white py-4 px-16 rounded-full bg-gray-900 my-24 text-center font-bold text-2xl font-heading">{{ stateMessage }}</div>
   </div>
 </template>
@@ -120,20 +121,7 @@ import { useSound } from '@vueuse/sound'
 import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from "@headlessui/vue";
 import { CheckIcon, SelectorIcon } from "@heroicons/vue/solid";
 
-
 import paginationSfx from '@/assets/sound/pagination.wav'
-
-import { 
-  // getNftsOf, 
-  // getBountiesOf, 
-  // getTotalGodsNFT,
-  // getTotalBounties,
-  // getStatsRoyaleCards,
-  // getJsonForGods,
-  // getJsonForBounties,
-  // getPrevWIns,
-  // getPrevDefeats
-} from "@/web3/nft";
 
 import SelectNFT from './components/SelectNFT.vue';
 import Popup from './components/Popup.vue';
@@ -215,7 +203,7 @@ export default {
     },
     toggleMyCollection(e) {
       this.showMyCollection = e;
-      this.currentPage = 1;
+      this.page = 1;
     },
     onChangePageInfo(value, info) {
       if(info === 'page') this.page = value;
@@ -231,7 +219,7 @@ export default {
       }else {
         this.type = e;
       }
-      this.currentPage = 1;
+      this.page = 1;
     },
   },
   computed: {

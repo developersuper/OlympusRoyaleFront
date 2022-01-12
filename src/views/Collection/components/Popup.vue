@@ -42,12 +42,12 @@
                   </div>
                   <div class="mmg:hidden mt-2 w-full place-content-center flex flex-col pb-6">
                     <div class="flex flex-row w-full">
-                      <span class="font-semibold w-1/3 text-gray-400 mt-2">ATTACK: {{model.attack}}</span>
-                      <span class="font-semibold w-1/3 text-gray-400 mt-2">DEFENSE: {{model.defense}}</span>
-                      <span class="font-semibold w-1/3 text-gray-400 mt-2">VITALITY: {{model.vitality}}</span>
+                      <span class="font-semibold w-1/3 text-gray-400 mt-2">ATTACK: {{model.stats[0]}}</span>
+                      <span class="font-semibold w-1/3 text-gray-400 mt-2">DEFENSE: {{model.stats[1]}}</span>
+                      <span class="font-semibold w-1/3 text-gray-400 mt-2">VITALITY: {{model.stats[2]}}</span>
                     </div>
                     <div class="flex flex-row w-full">
-                      <span class="font-bold w-1/3 text-gray-400 mt-2">SPEED: {{model.speed}}</span>
+                      <span class="font-bold w-1/3 text-gray-400 mt-2">SPEED: {{model.stats[3]}}</span>
                       <span class="font-bold w-1/3 mt-2 green">{{ model.win }} WINS</span>
                       <span class="font-bold w-1/3 mt-2 red">{{ model.lost }} LOSSES</span>
                     </div>
@@ -60,32 +60,32 @@
                       <div class="relative w-1/2 flex flex-col">
                         <div class="relative w-full">
                           <img class="absolute z-10 w-12 h-12 symbol-center" src="@/assets/cards/attack.png" alt="Logo" />
-                          <vc-donut :size="140" background="#081A2E" foreground="#2F455C" :thickness="42" :sections="[{ value: model.attack, color: attactColor }]"></vc-donut>
+                          <vc-donut :size="140" background="#081A2E" foreground="#2F455C" :thickness="42" :sections="[{ value: model.stats[1], color: attactColor }]"></vc-donut>
                         </div>  
-                        <span class="font-semibold text-gray-200 mt-4">ATTACK: {{model.attack}}/100</span>
+                        <span class="font-semibold text-gray-200 mt-4">ATTACK: {{model.stats[1]}}/100</span>
                       </div>
                       <div class="relative w-1/2 flex flex-col">
                         <div class="relative w-full">
                           <img class="absolute z-10 w-12 h-12 symbol-center" src="@/assets/cards/defense.png" alt="Logo" />
-                          <vc-donut :size="140" background="#081A2E" foreground="#2F455C" :thickness="42" :sections="[{ value: model.defense, color: defenseColor }]"></vc-donut>
+                          <vc-donut :size="140" background="#081A2E" foreground="#2F455C" :thickness="42" :sections="[{ value: model.stats[2], color: defenseColor }]"></vc-donut>
                         </div>
-                        <span class="font-semibold text-gray-200 mt-4">DEFENSE: {{model.defense}}/100</span>
+                        <span class="font-semibold text-gray-200 mt-4">DEFENSE: {{model.stats[2]}}/100</span>
                       </div>
                     </div>
                     <div class="flex flex-row w-full my-2 px-2">
                       <div class="relative w-1/2 flex flex-col">
                         <div class="relative w-full">
                           <img class="absolute z-10 w-12 h-12 symbol-center" src="@/assets/cards/vitality.png" alt="Logo" />
-                          <vc-donut :size="140" background="#081A2E" foreground="#2F455C" :thickness="42" :sections="[{ value: model.vitality, color: vitalityColor }]"></vc-donut>
+                          <vc-donut :size="140" background="#081A2E" foreground="#2F455C" :thickness="42" :sections="[{ value: model.stats[0], color: vitalityColor }]"></vc-donut>
                         </div>
-                        <span class="font-semibold text-gray-200 mt-4">HEALTH: {{model.vitality}}/100</span>
+                        <span class="font-semibold text-gray-200 mt-4">HEALTH: {{model.stats[0]}}/100</span>
                       </div>
                       <div class="relative w-1/2 flex flex-col">
                         <div class="relative w-full">
                           <img class="absolute z-10 w-12 h-12 symbol-center" src="@/assets/cards/speed.png" alt="Logo" />
-                          <vc-donut :size="140" background="#081A2E" foreground="#2F455C" :thickness="42" :sections="[{ value: model.speed, color: speedColor }]"></vc-donut>
+                          <vc-donut :size="140" background="#081A2E" foreground="#2F455C" :thickness="42" :sections="[{ value: model.stats[3], color: speedColor }]"></vc-donut>
                         </div>
-                        <span class="font-semibold text-gray-200 mt-4">SPEED: {{model.speed}}/100</span>
+                        <span class="font-semibold text-gray-200 mt-4">SPEED: {{model.stats[3]}}/100</span>
                       </div>
                     </div> 
                     <div class="flex flex-row w-full mmg:w-3/4 mx-auto my-2">
