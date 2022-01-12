@@ -3,9 +3,7 @@ import {
     getBounties,
     getMyGods,
     getMyBounties,
-    getMySoldiers
   } from "@/web3/nft";
-import { getSoldiers } from "../web3/nft";
 
 export default {
     namespaced: true,
@@ -22,11 +20,25 @@ export default {
             state.bounties = bounties;
         },
         setGods(state, gods) {
-            state.gods = gods;
+            state.gods = gods.map((god) => {
+                return {
+                    ...god,
+                    image: 'https://bafybeig6iusafwgftccirnxffy32zw2cy6kmvmd6z4sqwpheiuc7e5yx6i.ipfs.dweb.link/' + god.image,
+                }
+            });
         },
         setSoliders(state, soldiers) {
             state.soldiers = soldiers;
         },
+        setMyGods(state, myGods) {
+            state.myGods = myGods;
+        },
+        setMyBounties(state, myBounties) {
+            state.myBounties = myBounties;
+        },
+        setMySoldiers(state, mySoldiers) {
+            state.mySoldiers = mySoldiers;
+        }
     },
     getters: {
         totalLength(state) {
@@ -80,21 +92,32 @@ export default {
         },
     },
     actions: {
-        async loadCards({ commit, rootState }) {
-            console.log('loadCards');
-            const wallet = rootState.wallet.address;
+        async loadCards({ getters, commit }) {
             const gods = await getGods();
-            const myGods = await getMyGods(wallet, gods);
             commit('setGods', gods);
-            commit('setMyGOds', myGods);
+
             const bounties = await getBounties();
-            const myBounties = await getMyBounties(wallet, bounties);
             commit('setBounties', bounties);
+
+            // const soldiers = await getSoldiers();
+            // commit('setSoliders', soldiers);
+
+            console.log('loaded loadCards...', getters.gods, getters.bounties);
+
+        },
+        async loadMyCards({ getters, commit, rootState }) {
+            const wallet = rootState.wallet.address;
+
+            const myGods = await getMyGods(wallet, getters.gods);
+            commit('setMyGods', myGods);
+
+            const myBounties = await getMyBounties(wallet, getters.bounties);
             commit('setMyBounties', myBounties);
-            const soldiers = await getSoldiers();
-            const mySoldiers = await getMySoldiers(wallet, soldiers);
-            commit('setSoliders', soldiers);
-            commit('setMySoldiers', mySoldiers);
+
+            // const mySoldiers = await getMySoldiers(wallet, soldiers);
+            // commit('setMySoldiers', mySoldiers);
+
+            console.log('loaded myCards...');
         }
     }
 }

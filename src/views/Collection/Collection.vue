@@ -6,62 +6,7 @@
       VIEW AND MANAGE YOUR OLYMPUS NFT'S
   </p>
   <span class="xl:flex-row flex-col flex lg:space-y-0 space-y-4 justify-between mb-4 ml-4 xl:ml-0 mr-4 px-3 py-3 rounded-lg wow fadeInDown" data-wow-duration="0.6s" data-wow-delay="0.45s">
-    <div class="-mt-16 sm:mt-0 flex xl:flex-row lg:space-y-0 space-y-4 flex-col items-center lg:space-x-3">
-      <div class="relative z-0 inline-flex place-content-center shadow-sm rounded-md toggle-bg">
-        <div
-          :class="[
-            showGods ? 'text-locker_primary' : 'text-gray-300 hover:text-locker_primary',
-            'relative cursor-pointer text-sm md:text-xl font-bold w-1/3 inline-flex items-center px-4 py-2 text-sm font-medium text-gray-300',
-          ]"
-          @click="toggleGods"
-        >
-          <span class="absolute left-1/2">Gods</span>
-        </div>
-        <div
-          :class="[
-            showSoldiers ? 'text-locker_primary' : 'text-gray-300 hover:text-locker_primary',
-            'relative justify-center text-sm md:text-xl cursor-pointer font-bold w-1/3 inline-flex items-center px-4 py-2 text-sm font-medium text-gray-300',
-          ]"
-          @click="toggleSoldiers"
-        >
-          <span class="absolute left-1/4">Soldiers</span>
-        </div>
-        <div
-          :class="[
-            showBounties ? 'text-locker_primary' : 'text-gray-300 hover:text-locker_primary',
-            '-ml-px relative cursor-pointer text-sm md:text-xl font-bold w-1/3 inline-flex items-center px-4 py-2 text-sm font-medium text-gray-300',
-          ]"
-          @click="toggleBounties"
-        >
-          <span class="absolute right-1/3">Bounties</span>
-        </div>
-        <img 
-          :class="[
-            showGods ? 'block' : 'hidden',
-            'absolute toggle-btn top-3 sm:top-4 left-0'
-          ]" 
-          src="@/assets/toggle/gods-btn.png" 
-          @click="toggleGods"
-        />
-        <img 
-          :class="[
-            showSoldiers ? 'block' : 'hidden',
-            'absolute toggle-btn top-4 sm:top-5'
-          ]" 
-          src="@/assets/toggle/soldiers-btn.png"
-          @click="toggleSoldiers" 
-        />
-        <img 
-          :class="[
-            showBounties ? 'block' : 'hidden',
-            'absolute toggle-btn top-4 sm:top-5 right-0'
-          ]" 
-          src="@/assets/toggle/bounty-btn.png" 
-          @click="toggleBounties"
-        />
-      </div>
-    </div>
-
+    <SelectNFT @changeType="onChangeNFTType" :type="type" />
     <div class="flex xl:flex-row xl:space-y-0 space-y-4 flex-col items-center lg:space-x-3">
       <Listbox as="div" v-model="selectedCollection" class="w-72 xl:w-48 flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4">
         <div class="w-full mt-1 relative">
@@ -131,176 +76,69 @@
       
     </div>
   </span>
-      <Suspense>
-        <template #default>
-          <div v-if="filteredCards[1].length" class="flex flex-wrap overflow-visible wow fadeInDown" data-wow-duration=".6s" data-wow-delay=".55s">
-            <div class="font-heading fade-in px-4 pb-4 text-sm flex 2xl:w-1/4 xl:w-1/3 md:w-1/2 w-full h-auto justify-between" v-for="card in filteredCards[0]" v-bind:key="card">
-              <popup 
-                v-bind:cards="filteredCards[0]"
-                v-bind:id="card.id" 
-                v-bind:name="card.name" 
-                v-bind:image="card.image"
-                v-bind:video="card.video"  
-                v-bind:level="card.level" 
-                v-bind:power="card.power" 
-                v-bind:attack="card.attack" 
-                v-bind:defense="card.defense"
-                v-bind:vitality="card.vitality"
-                v-bind:speed="card.speed"
-                v-bind:win="card.win"
-                v-bind:lost="card.lost"
-                @close="showPopup = false" 
-                v-if="showPopup == card.id"
-              >
-              </popup>
-              <card
-                :card="card"
-                @to-view="toView(card.id)"
-              />
-            </div>
-          </div>
-      </template>
-    <template #fallback>
-      Loading...
-    </template>
-  </Suspense>
-
-  <div v-if="filteredCards[1].length" class="flex flex-row mx-auto place-content-center text-sm sm:text-lg text-gray-200 font-bold my-4">
-    NFT'S PER PAGE: 
-    <span 
-      :class="[
-        perPage == 16 ? 'text-locker_primary' : 'text-gray-200',
-        'mx-2 hover:text-gray-300 cursor-pointer transition-all duration-100 transform'
-      ]" 
-      @click="perPageCardStatus(16)"
-    >
-    16
-    </span>/
-    <span 
-      :class="[
-        perPage == 32 ? 'text-locker_primary' : 'text-gray-200',
-        'mx-2 hover:text-gray-300 cursor-pointer transition-all duration-100 transform'
-      ]" 
-      @click="perPageCardStatus(32)"
-    >
-    32
-    </span>/
-    <span 
-      :class="[
-        perPage == 64 ? 'text-locker_primary' : 'text-gray-200',
-        'mx-2 hover:text-gray-300 cursor-pointer transition-all duration-100 transform'
-      ]" 
-      @click="perPageCardStatus(64)"
-    >
-    64
-    </span>
-  </div>
-
-  <div v-if="filteredCards[1].length" class="flex flex-row mx-auto place-content-center">
-    <img 
-      :class="[
-        flagForPagination == false ? 'cursor-not-allowed' : 'cursor-pointer',
-        'w-6 h-6 sm:w-10 sm:h-10 mt-3 mr-1 sm:mr-2 hover:scale-110 cursor-pointer transition-all duration-200 transform'
-      ]" 
-      src="@/assets/prev.png"
-      @click="toPrev(this.currentPagination)"  
-    />
-    <div v-for="i in [(this.currentPagination - 1)*5+1, (this.currentPagination - 1)*5+2, (this.currentPagination - 1)*5+3, (this.currentPagination - 1)*5+4, this.currentPagination*5]" :key="i">
-      <div class="relative" v-if="Math.ceil((filteredCards[1].length)/this.perPage) > i - 1">
-        <img 
-          v-if="i < 10"
-          :class="[
-            currentPage == i ? 'hidden' : 'block',
-            'w-12 h-12 sm:w-16 sm:h-16 hover:scale-110 cursor-pointer transition-all duration-200 transform'
-          ]" 
-          @click="currentPageStatus(i)" src="@/assets/pagination/one.png" />
-        <img 
-          v-if="i > 9 && i < 100"
-          :class="[
-            currentPage == i ? 'hidden' : 'block',
-            'w-16 h-12 sm:w-20 sm:h-16 hover:scale-110 cursor-pointer transition-all duration-200 transform'
-          ]" 
-          @click="currentPageStatus(i)" src="@/assets/pagination/one.png" />
-        <span :class="[
-            currentPage == i ? 'hidden' : 'block',
-            'absolute font-bold guavacandy cursor-pointer'
-          ]"
-          @click="currentPageStatus(i)"
-        >
-        {{ i }}
-        </span>
-        <span :class="[
-            currentPage == i ? 'block' : 'hidden',
-            'absolute font-bold guavacandy-click z-50 cursor-pointer'
-          ]"
-        >
-        {{ i }}
-        </span>
-        <span :class="[
-            currentPage == i ? 'block' : 'hidden',
-            'absolute font-bold guavacandy-click-1 z-20 cursor-pointer'
-          ]"
-        >
-        {{ i }}
-        </span>
-        <img 
-          v-if="i < 10"
-          :class="[
-            currentPage == i ? 'block' : 'hidden',
-            'w-12 sm:w-16 hover:scale-110 cursor-pointer transition-all duration-200 transform'
-          ]" 
-          src="@/assets/pagination/one-click.png" 
-        />
-        <img 
-          v-if="i > 9 && i < 100"
-          :class="[
-            currentPage == i ? 'block' : 'hidden',
-            'w-16 h-20 sm:w-20 sm:h-24 hover:scale-110 cursor-pointer transition-all duration-200 transform'
-          ]" 
-          src="@/assets/pagination/one-click.png" 
-        />
-      </div>
+  <div v-if="filteredCards[1].length" class="flex flex-wrap overflow-visible wow fadeInDown" data-wow-duration=".6s" data-wow-delay=".55s">
+    <div class="font-heading fade-in px-4 pb-4 text-sm flex 2xl:w-1/4 xl:w-1/3 md:w-1/2 w-full h-auto justify-between" v-for="card in filteredCards[0]" v-bind:key="card.image">
+      <Popup 
+        v-bind:cards="filteredCards[0]"
+        v-bind:id="card.id" 
+        v-bind:name="card.name" 
+        v-bind:image="card.image"
+        v-bind:video="card.video"  
+        v-bind:level="card.level" 
+        v-bind:power="card.power" 
+        v-bind:attack="card.attack" 
+        v-bind:defense="card.defense"
+        v-bind:vitality="card.vitality"
+        v-bind:speed="card.speed"
+        v-bind:win="card.win"
+        v-bind:lost="card.lost"
+        @close="showPopup = false" 
+        v-if="showPopup == card.id"
+      />
+      <Card :card="card" @toView="toView" />
     </div>
-    <img 
-      :class="[
-        flagForPagination == false ? 'cursor-not-allowed' : 'cursor-pointer',
-        'w-6 h-6 sm:w-10 sm:h-10 mt-3 ml-1 sm:ml-2 hover:scale-110 cursor-pointer transition-all duration-200 transform'
-      ]" 
-      src="@/assets/right.png"
-      @click="toNext(this.currentPagination)"  
-    />
   </div>
 
-  <div class="flex place-content-center" v-else>
-    <div class="text-white py-4 px-16 rounded-full bg-gray-900 my-24 text-center font-bold text-2xl font-heading">{{ noCardsText }}</div>
+  <Pagination 
+    :totalLength="filteredCards[1].length"
+    :currentPage="page"
+    :perPage="perPage"
+    :perPages="[16, 32, 64]"
+    @updatePage="onChangePageInfo($event, 'page')"
+    @updatePerPage="onChangePageInfo($event, 'perPage')"
+  />
+
+  <div class="flex place-content-center">
+    <div class="text-white py-4 px-16 rounded-full bg-gray-900 my-24 text-center font-bold text-2xl font-heading">{{ stateMessage }}</div>
   </div>
 </template>
 
 <script>
-import { getAccount } from "@/web3/index";
-import { 
-  getNftsOf, 
-  getBountiesOf, 
-  getTotalGodsNFT,
-  getTotalBounties,
-  getStatsRoyaleCards,
-  getJsonForGods,
-  getJsonForBounties,
-  getPrevWIns,
-  getPrevDefeats
-} from "@/web3/nft";
-import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from "@headlessui/vue";
-import { CheckIcon, SelectorIcon } from "@heroicons/vue/solid";
-import Popup from "./components/Popup.vue";
 import { ref } from "vue";
 import { mapGetters } from 'vuex';
 import { useSound } from '@vueuse/sound'
+import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from "@headlessui/vue";
+import { CheckIcon, SelectorIcon } from "@heroicons/vue/solid";
 
-import buttonSfx from '@/assets/sound/click.mp3'
-import modalSfx from '@/assets/sound/modal.wav'
+
 import paginationSfx from '@/assets/sound/pagination.wav'
 
+import { 
+  // getNftsOf, 
+  // getBountiesOf, 
+  // getTotalGodsNFT,
+  // getTotalBounties,
+  // getStatsRoyaleCards,
+  // getJsonForGods,
+  // getJsonForBounties,
+  // getPrevWIns,
+  // getPrevDefeats
+} from "@/web3/nft";
+
+import SelectNFT from './components/SelectNFT.vue';
+import Popup from './components/Popup.vue';
 import Card from './components/Card.vue';
+import Pagination from './components/Pagination.vue';
 
 const tokens = [
   {
@@ -335,60 +173,34 @@ export default {
       connectedWallet: "0x00",
       ascending: true,
       showMyCollection: true,
-      showSoldiers: false,
-      showGods: false,
-      showBounties: false,
-      currentPage: 1,
-      currentPagination: 1,
+      type: 'all',      
       flagForPagination: true,
-      perPage: 16,
       searchValue: "",
       collectionType: "",
       cards: [],
-      owners: [],
-      yourNfts: [],
-      godNfts: [],
-      bountyNfts: [],
-      totalLength: 0,
-      noCardsText: "Loading...",
       showPopup: "",
-      bountyData: [
-        {
-          name: "Bullish Billionair Ltd Ediditon NFT",
-          image: "https://user-images.githubusercontent.com/81764479/146896413-9bb4d236-fa8f-455e-83f1-2374faac36e2.png",
-        },
-        {
-          name: "The Fury of Poseidon [Power-Up] NFT",
-          image: "https://user-images.githubusercontent.com/81764479/146898204-90d1e9e7-4100-40e8-8603-64d3c4def05a.png",
-        },
-        {
-          name: "The Power of Zeus [Power-Up] NFT",
-          image: "https://user-images.githubusercontent.com/81764479/146896430-dfa46f9a-cb00-49cb-a0fe-e3b346381003.png",
-        }
-      ]
+      page: 1,
+      perPage: 16,
     };
   },
   components: {
-    Popup,
     Listbox,
     ListboxButton,
     ListboxOption,
     ListboxOptions,
     CheckIcon,
     SelectorIcon,
+    Popup,
     Card,
+    SelectNFT,
+    Pagination,
   },
   setup() {
     const selectedSortBy = ref(tokens[0]);
     const selectedCollection = ref(tokenMyCollection[0]);
-    const onSound = useSound(buttonSfx, { volume: 0.25 })
-    const modalSound = useSound(modalSfx, { volume: 0.25 })
     const paginationSound = useSound(paginationSfx, { volume: 0.25 })
-
     return {
       tokens,
-      onSound,
-      modalSound,
       paginationSound,
       selectedSortBy,
       tokenMyCollection,
@@ -396,13 +208,6 @@ export default {
     };
   },
   async mounted() {
-    this.wallet = await getAccount();
-    this.getTotalLength();
-    await this.getYourBounties();
-    await this.getYourNfts();
-    this.getAllBountiesNfts();
-    this.getAllGodsNfts();
-    // this.getOwners();
   },
   methods: {
     setSortBy(e) {
@@ -412,256 +217,71 @@ export default {
       this.showMyCollection = e;
       this.currentPage = 1;
     },
-    toPrev(e) {
-      if (e == 1) {
-        this.flagForPagination = false;
-      }
-      else {
-        this.flagForPagination = true;
-        this.currentPagination = e - 1;
-        this.currentPage = (e-2)*5 + 1;
-      }
-    },
-    toNext(e) {
-      if (e == Math.ceil(this.filteredCards[2]/((this.perPage)*5))) {
-        this.flagForPagination = false;
-      }
-      else {
-        this.flagForPagination = true;
-        this.currentPagination = e + 1;
-        this.currentPage = e*5 + 1;
-      }
-    },
-    async getTotalLength() {
-      const a = await getTotalBounties();
-      const b = await getTotalGodsNFT(); 
-      const tLength = Number(a) + Number(b); 
-      this.totalLength = tLength;
-    },
-    async getAllBountiesNfts() {
-      const length = await getTotalBounties(); 
-      // TODO: For the future change 1000 to whatever necessary reading from the contract.
-      for (let i = 0; i < length; i++) {
-        let url = await getJsonForBounties(i);
-        fetch(url)
-        .then(res => res.json())
-        .then((out) => {
-            this.cards.push({
-              id: i+1,
-              name: out.name,
-              image: out.image,
-              video: out.video,
-              owner: "",
-              rarity: 1,
-              value: "??? OLYMPUS",
-              collection: out.attributes[0].trait_type
-            })
-        })
-        .catch(err => {
-            throw err
-        });
-      }
-    },
-    async getAllGodsNfts() {
-      const addNo = await getTotalBounties(); 
-      const length = await getTotalGodsNFT();
-      // TODO: For the future change 1000 to whatever necessary reading from the contract.
-      for (let i = 0; i < length; i++) {
-        let url = await getJsonForGods(i);
-        const stats = await getStatsRoyaleCards(i);
-        const wins = await getPrevWIns(i);
-        const defeats = await getPrevDefeats(i);
-          fetch(url)
-          .then(res => res.json())
-          .then((out) => {
-              this.cards.push({
-                id: i + Number(addNo) + 1,
-                name: out.name,
-                image: out.image.replace("play.olympustoken.io/", "bafybeig6iusafwgftccirnxffy32zw2cy6kmvmd6z4sqwpheiuc7e5yx6i").replace("img/", ".ipfs").replace("nfts/", ".dweb.link/"),
-                owner: "",
-                rarity: 1,
-                value: "??? OLYMPUS",
-                power: stats.attack + stats.defence + stats.hp + stats.speed,
-                level: out.attributes[2].value,
-                attack: stats.attack,
-                defense: stats.defence,
-                vitality: stats.hp,
-                speed: stats.speed,
-                win: wins,
-                lost: defeats,
-                collection: out.attributes[0].trait_type
-              })
-          })
-          .catch(err => {
-              throw err
-          });
-      }
+    onChangePageInfo(value, info) {
+      if(info === 'page') this.page = value;
+      if(info === 'perPage') this.perPage = value;
+      console.log(value, info);
     },
     toView(e) {
       this.showPopup = e;
-      this.modalSound.play();
     },
-    currentPageStatus(e) {
-      this.currentPage = e;
-       this.paginationSound.play();
-    },
-    perPageCardStatus(e) {
-      this.perPage = e;
-      this.currentPage = 1;
-    },
-    toggleGods() {
-      this.showGods = this.showGods ? false : true;
-      this.currentPage = 1;
-      this.showSoldiers = false;
-      this.showBounties = false;
-      this.onSound.play();
-    },
-    toggleSoldiers() {
-      this.showSoldiers = this.showSoldiers ? false : true;
-      this.currentPage = 1;
-      this.showGods = false;
-      this.showBounties = false;
-      this.onSound.play();
-    },
-    toggleBounties() {
-      this.showBounties = this.showBounties ? false : true;
-      this.currentPage = 1;
-      this.showGods = false;
-      this.showSoldiers = false;
-      this.onSound.play();
-    },
-
-    // async getOwners() {
-    //   // This ideally should be managed server side and cached
-    //   // It's just too damn slow
-    //   for (let i = 0; i < 1000; i++) {
-    //     const owner = await getOwner(i);
-    //     this.owners.push(owner);
-    //   }
-    // },
-    async getYourBounties() {
-      const nfts = await getBountiesOf(this.wallet);
-      if (nfts.length == 0) {
-        this.noCardsText = "No cards";
-      } else {
-        for (const nft of nfts) {
-          this.bountyNfts.push(nft.toNumber());
-        }
+    onChangeNFTType(e) {
+      if(this.type === e) {
+        this.type = 'all';
+      }else {
+        this.type = e;
       }
-      const arr = Object.values(this.bountyNfts);
-      for (let i = 0; i < arr.length; i ++) {
-            let url = await getJsonForBounties(arr[i]);
-            fetch(url)
-            .then(res => res.json())
-            .then((out) => {
-                this.yourNfts.push({
-                  id: arr[i] + 1,
-                  name: out.name,
-                  image: out.image,
-                  video: out.video,
-                  owner: "",
-                  rarity: 1,
-                  value: "??? OLYMPUS",
-                  collection: out.attributes[0].trait_type
-                })
-            })
-            .catch(err => {
-                throw err
-            });
-        }
-    },
-    async getYourNfts() {
-      const nfts = await getNftsOf(this.wallet);
-      if (nfts.length == 0) {
-        this.noCardsText = "No cards";
-      } else {
-        for (const nft of nfts) {
-          this.godNfts.push(nft.toNumber());
-        }
-      }
-      const arr = Object.values(this.godNfts);
-      const addNo = await getTotalBounties(); 
-      for (let i = 0; i < arr.length; i ++) {
-          let url = await getJsonForGods(arr[i]);
-          const stats = await getStatsRoyaleCards(i);
-          const wins = await getPrevWIns(i);
-          const defeats = await getPrevDefeats(i);
-            fetch(url)
-            .then(res => res.json())
-            .then((out) => {
-                this.yourNfts.push({
-                  id: i + Number(addNo) + 1,
-                  name: out.name,
-                  image: out.image.replace("play.olympustoken.io/", "bafybeig6iusafwgftccirnxffy32zw2cy6kmvmd6z4sqwpheiuc7e5yx6i").replace("img/", ".ipfs").replace("nfts/", ".dweb.link/"),
-                  owner: "",
-                  rarity: 1,
-                  value: "??? OLYMPUS",
-                  power: stats.attack + stats.defence + stats.hp + stats.speed,
-                  level: out.attributes[2].value,
-                  attack: stats.attack,
-                  defense: stats.defence,
-                  vitality: stats.hp,
-                  speed: stats.speed,
-                  win: wins,
-                  lost: defeats,
-                  collection: out.attributes[0].trait_type
-                })
-            })
-            .catch(err => {
-                throw err
-            });
-        }
+      this.currentPage = 1;
     },
   },
   computed: {
     ...mapGetters('cards', [
       'gods',
       'bounties',
+      'soldiers',
       'myGods',
-      'myBounties'
+      'myBounties',
+      'mySoldiers',
+      'totalLength'
+    ]),
+    ...mapGetters('wallet', [
+      'address'
     ]),
     filteredCards() {
-      let tempCards = this.cards;
+      let cards = [];
+      if(this.showMyCollection) {
+        if(this.type === 'all') cards = [...this.myBounties, ...this.myGods, ...this.mySoldiers];
+        if(this.type === 'gods') cards = this.myGods;
+        if(this.type === 'soldiers') cards = this.mySoldiers;
+        if(this.type === 'bounties') cards = this.myBounties;
+      }
+      else {
+        if(this.type === 'all') cards = [...this.bounties, ...this.gods, ...this.soldiers];
+        if(this.type === 'gods') cards = this.gods;
+        if(this.type === 'soldiers') cards = this.soldiers;
+        if(this.type === 'bounties') cards = this.bounties;
+      }
 
-      // Process search input
       if (this.searchValue != "" && this.searchValue) {
-        tempCards = tempCards.filter((card) => {
+        cards = cards.filter((card) => {
           return card.name.toUpperCase().includes(this.searchValue.toUpperCase());
         });
       }
 
-      // Show user collection
-      if (this.showMyCollection){
-        tempCards = [...this.yourNfts];
-      }
-
-      // Show gods
-      if (this.showGods)
-        tempCards = tempCards.filter((item) => {
-          return item.collection == "God";
-        });
-
-      // Show soldiers
-      if (this.showSoldiers)
-        tempCards = tempCards.filter((item) => {
-          return item.collection == "soldiers";
-        });
-
-      // Show bounties
-      if (this.showBounties)
-        tempCards = tempCards.filter((item) => {
-          return item.collection == "Bounty";
-        });
+      cards = cards.map((card, idx) => ({
+        ...card,
+        id: idx + 1
+      }));
 
       // Sort by id
-      tempCards = tempCards.sort((a, b) => {
+      cards = cards.sort((a, b) => {
         if (this.sortBy == "id") {
           return a.id - b.id;
         }
       });
 
       // Sort by rarity
-      tempCards = tempCards.sort((a, b) => {
+      cards = cards.sort((a, b) => {
         if (this.sortBy == "rarity") {
           return a.rarity - b.rarity;
         }
@@ -669,11 +289,18 @@ export default {
 
       // Show sorted array in descending or ascending order
       if (!this.ascending) {
-        tempCards.reverse();
+        cards.reverse();
       }
-      const a = (this.currentPage - 1)*(this.perPage)
-      return [tempCards.slice(a,  a+this.perPage), tempCards, tempCards.length];
+
+      const start = (this.page - 1) * this.perPage;
+      console.log('filtered cards', cards);
+      return [cards.slice(start,  start + this.perPage), cards, cards.length];
     },
+    stateMessage() {
+      if(this.showMyCollection && this.address === null) return 'Connect your wallet';
+      if(this.filteredCards[1].length === 0) return 'No cards';
+      return '';
+    }
   },
 };
 </script>

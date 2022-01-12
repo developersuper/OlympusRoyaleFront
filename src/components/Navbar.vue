@@ -60,7 +60,7 @@
         </template>
       </Popper>
 
-      <Button name="Connect" class="connectBtn w-full max-w-32" v-if="!$store.getters['wallet/isWalletConnected']" @click="$store.dispatch('wallet/connectWallet')" />
+      <Button name="Connect" class="connectBtn w-full max-w-32" v-if="!$store.getters['wallet/isWalletConnected']" @click="connect()" />
       <Button :name="$store.getters['wallet/addressPreviewLong']" class="connectBtn w-full max-w-32" @click="$store.commit('wallet/disconnectWallet')" v-else />
     </nav>
   </div>
@@ -94,6 +94,10 @@ export default {
     },
     toggleDapps() {
       this.dappsOpen = !this.dappsOpen;
+    },
+    async connect() {
+      await this.$store.dispatch('wallet/connectWallet');
+      await this.$store.dispatch('cards/loadMyCards');
     },
     async enableMetamask() {
         if (!this.loaded) {

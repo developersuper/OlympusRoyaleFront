@@ -196,8 +196,8 @@ export async function getGods() {
 
 export async function getMyGods(wallet, gods) {
 	try{
-		const nfts = await getNftsOf(wallet);
-		const myGods = gods.filter((god) => nfts.indexOf(god.id) >= 0);
+		const nfts = (await getNftsOf(wallet)).map((nft) => nft.toNumber());
+		const myGods = gods.filter((god) => nfts.indexOf(parseInt(god.id)) >= 0);
 		return myGods;
 	}catch(e) {
 		console.log('Error occured', e);
@@ -217,8 +217,8 @@ export async function getBounties() {
 
 export async function getMyBounties(wallet, bounties) {
 	try{
-		const nfts = await getBountiesOf(this.wallet);
-		const myBounties = bounties.filter((bounty) => nfts.indexOf(bounty) >= 0);
+		const nfts = (await getBountiesOf(wallet)).map((nft) => nft.toNumber());
+		const myBounties = bounties.filter((bounty) => nfts.indexOf(parseInt(bounty.id)) >= 0);
 		return myBounties;
 	}catch(e) {
 		console.log('Error occured', e);

@@ -31,11 +31,10 @@ export default {
   methods: {
     ...mapActions('cards',[
       'loadCards'
-    ])
+    ]),
   },
   async mounted() {
     await this.loadCards();
-    console.log('loading...');
   }
 };
 </script>

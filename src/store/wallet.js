@@ -64,7 +64,7 @@ export default {
 
             commit("loadAccount", {address, balance});
         },
-        async connectWallet({state, commit, dispatch, rootState}){
+        async connectWallet({ commit, dispatch, rootState}){
             const providerOptions = {
                 walletconnect: {
                     package: WalletConnectProvider, // required
@@ -83,8 +83,8 @@ export default {
 
             let provider = await web3Modal.connect();
 
-            provider.on('accountsChanged', () => {
-                dispatch("loadAccount");
+            provider.on('accountsChanged', async () => {
+                await dispatch("loadAccount");
             })
 
             provider.on('disconnect', () => {
@@ -95,8 +95,8 @@ export default {
             commit("connectWeb3", web3);
             await dispatch("loadAccount");
 
-            dispatch("locks/loadHolderLocks", state.address, {root:true});
-            dispatch("tokenLocks/loadHolderLocks", state.address, {root:true});
+            // dispatch("locks/loadHolderLocks", state.address, {root:true});
+            // dispatch("tokenLocks/loadHolderLocks", state.address, {root:true});
         }
     }
 }
