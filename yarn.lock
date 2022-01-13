@@ -2589,6 +2589,11 @@ acorn@^8.4.1:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.7.0.tgz#90951fde0f8f09df93549481e5fc141445b791cf"
   integrity sha512-V/LGr1APy+PXIwKebEWrkZPwoeoF+w1jiOBUmuxuiUIaOHtob8Qc9BTrYo7VuI5fR8tqsy+buA2WFooR5olqvQ==
 
+add@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/add/-/add-2.0.6.tgz#248f0a9f6e5a528ef2295dbeec30532130ae2235"
+  integrity sha1-JI8Kn25aUo7yKV2+7DBTITCuIjU=
+
 address@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/address/-/address-1.1.2.tgz#bf1116c9c758c51b7a933d296b72c221ed9428b6"
@@ -3690,6 +3695,18 @@ clone@^2.0.0, clone@^2.1.1:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/clone/-/clone-2.1.2.tgz#1b7f4b9f591f1e8f83670401600345a02887435f"
   integrity sha1-G39Ln1kfHo+DZwQBYANFoCiHQ18=
+
+cloudinary-core@^2.10.3:
+  version "2.12.3"
+  resolved "https://registry.yarnpkg.com/cloudinary-core/-/cloudinary-core-2.12.3.tgz#6482e472944214ff905c4852da0a4afce14dec2b"
+  integrity sha512-Ll4eDzcrIVn4zCttMh3Mdi+KNz07p5EEjBT2PQSRx8Eok1lKPt3uBBenOk/w88RKK3B8SFIWcEe/mN4BHQ0p8A==
+
+cloudinary-vue@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/cloudinary-vue/-/cloudinary-vue-1.2.3.tgz#bed730efb4d2ba7d1e2a866a9b085031d764ed88"
+  integrity sha512-KC3FQkfO2CW2kN6jCBQGX1k+s9hVW3YWF0IUS4Osbo+DK8/OSDXQ6iNy0NX2275wVTW5HXCCcXVq0gqOH5myfg==
+  dependencies:
+    cloudinary-core "^2.10.3"
 
 coa@^2.0.2:
   version "2.0.2"

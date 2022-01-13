@@ -1,5 +1,5 @@
 <template>
-  <div @mouseover="onHover()" class="bg-gray-900 border rounded-3xl border-gray-bc w-full px-4 pt-4 pb-2 nft-cards cursor-pointer wow flipInX" data-wow-duration="1s" data-wow-delay=".55s">
+  <div class="bg-gray-900 border rounded-3xl border-gray-bc w-full px-4 pt-4 pb-2 nft-cards cursor-pointer wow flipInX" data-wow-duration="1s" data-wow-delay=".55s">
     <img 
       :class="[
         imageStyle,
@@ -7,7 +7,7 @@
       ]" 
       v-lazy="{
         src: lazyOptions.src,
-        loading: require('@/assets/emptybackground.png'),
+        loading: lazyOptions.loading,
         error: require('@/assets/emptybackground.png'),
         lifecycle: lazyOptions.lifecycle
       }"
@@ -27,7 +27,10 @@
 import { reactive } from 'vue'
 import { useSound } from '@vueuse/sound'
 
+import { nftImages } from '@/assets/loadingNfts/nfts.js'
 import backSfx from '@/assets/sound/back.wav'
+
+
 
 export default {
   props: {
@@ -35,17 +38,29 @@ export default {
   },
   setup(props) {
     const modalSound = useSound(backSfx, { volume: 0.25 });
+
+    let loading = '';
+    let src = '';
+
+    if(props.card.attributes[0].trait_type === 'God') {
+      loading = nftImages[`gods${props.card.image.split('/')[8].split('-')[0]}`];
+      src = '' + props.card.image;
+    }
+
+    if(props.card.attributes[0].trait_type === 'Bounty') {
+      loading = nftImages[`bounties${props.card.image.split('/')[8].split('.')[0]}`];
+      src = '' + props.card.image;
+    }
+
     const lazyOptions = reactive({
-      src: props.card.image,
+      src,
+      loading,
       lifecycle: {
         loading: () => {
-          console.log('image loading', props.card.id)
         },
         error: () => {
-          console.log('image error', props.card.id)
         },
         loaded: () => {
-          console.log('image loaded', props.card.id)
         }
       }
     })
@@ -59,10 +74,8 @@ export default {
     }
   },
   mounted() {
-    console.log(this.card, ' mounted');
   },
   unmounted() {
-    console.log(this.card, ' unmounted');
   },
   methods: {
     toView() {
@@ -72,9 +85,6 @@ export default {
     onLoad() {
       this.loaded = true;
     },
-    onHover() {
-      this.modalSound.play();
-    }
   },
   computed: {
     imageStyle() {

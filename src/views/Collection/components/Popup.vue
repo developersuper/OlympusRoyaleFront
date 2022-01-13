@@ -10,19 +10,19 @@
               </div>
               <img 
                 :class="[
-                  flagPrev == false ? 'cursor-not-allowed' : 'cursor-pointer',
+                  selected === 0 ? 'cursor-not-allowed' : 'cursor-pointer',
                   'absolute top-50pc left-0 w-10 h-10 sm:w-14 sm:h-14 mt-3 mr-1 sm:mr-2 hover:scale-110 transition-all duration-200 transform'
                 ]" 
                 src="@/assets/prev.png"
-                @click="toPrev(model.id)" 
+                @click="toPrev()" 
               />
               <img 
                 :class="[
-                  flagNext == false ? 'cursor-not-allowed' : 'cursor-pointer',
+                  selected === cards.length - 1 ? 'cursor-not-allowed' : 'cursor-pointer',
                   'absolute top-50pc right-0 w-10 h-10 sm:w-14 sm:h-14 mt-3 ml-1 sm:ml-2 hover:scale-110 transition-all duration-200 transform'
                 ]" 
                 src="@/assets/right.png" 
-                @click="toNext(model.id)" 
+                @click="toNext()" 
               />
               <a href="https://lootex.io/stores/olympus-royale" target="_blank">
                 <button
@@ -34,7 +34,14 @@
               <div class="bg-gray-900 h-full border rounded-3xl border-gray-700">
                 <div class="flex flex-col h-full mmg:flex-row justify-between px-2 py-4">
                   <div class="flex relative flex-col w-full mmg:w-1/2 text-center h-full place-content-center">
-                    <img class="p-2 sm:p-4 sm:max-w-sm xxs:max-w-70 max-w-50 mx-auto select-none" :src="model.image" />
+                    <img 
+                      class="p-2 w-100 sm:p-4 sm:max-w-sm xxs:max-w-70 max-w-50 mx-auto select-none" 
+                      v-lazy="{
+                        src: model.image,
+                        loading: loading,
+                        error: require('@/assets/emptybackground.png'),
+                      }"
+                    />
                     <div class="-mt-8">
                       <h4 class="text-center text-lg text-white flex justify-center opensans">{{ model.name }}</h4>
                       <span class="text-base sm:text-xl font-bold shadow-power text-white flex justify-center">POWER: {{ model.power }}</span>
@@ -90,10 +97,10 @@
                     </div> 
                     <div class="flex flex-row w-full mmg:w-3/4 mx-auto my-2">
                       <div class="w-1/2 flex flex-row">
-                        <img class="w-9" src="@/assets/cards/won.png" /><span class="green font-bold text-lg p-1">{{ model.win }} WINS</span>
+                        <img class="w-9" src="@/assets/cards/won.png" /><span class="green font-bold text-lg p-1">{{ wins }} WINS</span>
                       </div>
                       <div class="w-1/2 flex flex-row">
-                        <img class="w-9" src="@/assets/cards/lost.png" /><span class="red font-bold text-lg p-1">{{ model.lost }} LOSSES</span>
+                        <img class="w-9" src="@/assets/cards/lost.png" /><span class="red font-bold text-lg p-1">{{ defeats }} LOSSES</span>
                       </div>
                     </div>
                     <span class="card-status-color font-bold">VIEW BATTLE RECORD</span>
@@ -101,36 +108,38 @@
                 </div>
               </div>
             </div>
-            <div v-else class="absolute h-auto popup-video z-50 symbol-center p-3 md:p-6 xl:py-8 xl:px-16">
+            <div v-else class="absolute h-auto popup-video z-50 p-3 symbol-center md:p-6 xl:py-8 xl:px-16">
               <div class="absolute right-0 top-0 xl:right-6 xl:top-0 z-40">
                 <div @click="$emit('close')" class="select-none cursor-pointer h-10 w-10 md:w-14 md:h-14 xl:h-20 xl:w-20 close-popup" />
               </div>
               <img 
                 :class="[
-                  flagPrev == false ? 'cursor-not-allowed' : 'cursor-pointer',
+                  selected === 0 ? 'cursor-not-allowed' : 'cursor-pointer',
                   'absolute top-50pc z-40 left-0 w-10 h-10 sm:w-14 sm:h-14 mt-3 mr-1 sm:mr-2 hover:scale-110 transition-all duration-200 transform'
                 ]" 
                 src="@/assets/prev.png"
-                @click="toPrev(model.id)" 
+                @click="toPrev()" 
               />
               <img 
                 :class="[
-                  flagNext == false ? 'cursor-not-allowed' : 'cursor-pointer',
+                  selected === cards.length - 1 ? 'cursor-not-allowed' : 'cursor-pointer',
                   'absolute top-50pc z-40 right-0 w-10 h-10 sm:w-14 sm:h-14 mt-3 ml-1 sm:ml-2 hover:scale-110 transition-all duration-200 transform'
                 ]" 
                 src="@/assets/right.png" 
-                @click="toNext(model.id)" 
+                @click="toNext()" 
               />
-              <div class="bg-gray-900 p-4 sm:p-8 h-auto border rounded-3xl border-gray-700">
+              <div class="bg-gray-900 h-auto border rounded-3xl border-gray-700">
                 <!-- <video class="rounded-lg" autoplay="" controls="" controlslist="nodownload" loop="" playsinline="" preload="auto">
                   <source :src="model.video" type="video/mp4" />
                   Your browser does not support videos.
                 </video> -->
-                <vue3-video-player class="rounded-lg" src="https://user-images.githubusercontent.com/81764479/148546265-751a6eec-9e21-4b96-84cc-791988dd248e.mp4" autoplay loop 
-                :controls="false"
-                ></vue3-video-player>
+                <vue3-video-player 
+                  class="rounded-t-lg" 
+                  src="https://user-images.githubusercontent.com/81764479/148546265-751a6eec-9e21-4b96-84cc-791988dd248e.mp4" autoplay loop 
+                  :controls="false"
+                />
                 <h4 class="text-center text-lg text-white flex justify-center opensans mt-4">{{ model.name }}</h4>
-                <span class="text-base sm:text-xl font-bold shadow-power text-white flex justify-center">POWER: {{ model.power }}</span>
+                <!-- <span class="text-base sm:text-xl font-bold shadow-power text-white flex justify-center">POWER: {{ model.power }}</span> -->
               </div>
             </div>
           </TransitionChild>
@@ -145,18 +154,18 @@ import { TransitionRoot, TransitionChild, Dialog } from "@headlessui/vue";
 //import { getTotalGodsNFT } from "@/web3/nft";
 import { useSound } from '@vueuse/sound'
 import nextSfx from '@/assets/sound/back.wav'
+import { nftImages } from '@/assets/loadingNfts/nfts.js'
+// import { getPrevDefeats, getPrevWins } from '@/web3/nft.js'
 
 export default {
-  props: ["cards", "id", "image", "video", "name", "level", "power", "attack", "defense", "vitality", "speed", "win", "lost"],
+  props: ["cards", "id"],
   data() {
     return {
       attactColor: "#cc2b2e",
       defenseColor: "#0ebede",
       vitalityColor: "#26d670",
       speedColor: "#e9bd24",
-      model: [],
-      flagPrev: true,
-      flagNext: true,
+      selected: 0,
     };
   },
   setup() {
@@ -174,46 +183,20 @@ export default {
     };
   },
   mounted() {
+    this.selected = this.id - 1
   },
   methods: {
-    toPrev(e) {
-      if (e == 1) {
-        this.flagPrev = false;
-      }
-      else {
-        this.flagPrev = true;
-        this.nextSound.play();
-        const prevCard = this.$props.cards.filter((card) => {
-          return card.id == e-1;
-        });
-        this.model = {
-          ...prevCard[0],
-        }
-      }
+    toPrev() {
+      if(this.selected === 0) return;
+
+      this.nextSound.play();
+      this.selected = this.selected - 1;
     },
-    async toNext(e) {
-      //const leng = await getTotalGodsNFT();
-      if (e == this.$props.cards.length) {
-        this.flagNext = false;
-      }
-      else {
-        this.flagNext = true;
-        this.nextSound.play();
-        const nextCard = this.$props.cards.filter((card) => {
-          return card.id == e+1;
-        });
-        this.model = {
-          ...nextCard[0],
-        }
-      }
-    }
-  },
-  created() {
-    const tempCards = this.$props.cards.filter((item) => {
-          return item.id == this.$props.id;
-        });
-    this.model = {
-      ...tempCards[0],
+    async toNext() {
+      if(this.selected === this.cards.length - 1) return;
+
+      this.nextSound.play();
+      this.selected = this.selected + 1;
     }
   },
   components: {
@@ -221,11 +204,31 @@ export default {
     TransitionChild,
     Dialog,
   },
+  computed: {
+    model() {
+      return this.cards[this.selected];
+    },
+    loading() {
+      if(Object.keys(this.model).length === 0) return;
+      console.log(this.model);
+      if(this.model?.attributes[0]?.trait_type === 'God') {
+        return nftImages[`gods${this.model.image.split('/')[8].split('-')[0]}`];
+      }
+      if(this.model?.attributes[0]?.trait_type === 'Bounty') {
+        return nftImages[`bounties${this.model.image.split('/')[8].split('.')[0]}`];
+      }
+      return '';
+    }
+  }
 };
 </script>
 
+<style>
+  video {
+    border-radius: 0.3rem 0.3rem 0 0;
+  }
+</style>
 <style scoped>
-
 .close-popup {
   background: url("~@/assets/close.png");
   background-size: contain;
@@ -264,6 +267,11 @@ export default {
   }
 }
 
-
+img[lazy=loading] {
+  margin-bottom: 40px;
+}
+img[lazy=error] {
+  margin-bottom: 40px;
+}
 
 </style>

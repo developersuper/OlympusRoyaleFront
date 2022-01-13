@@ -30,7 +30,12 @@ export default {
     }),
     mutations: {
         setBounties(state, bounties) {
-            state.bounties = bounties;
+            state.bounties = bounties.map((bounty) => {
+                return {
+                    ...bounty,
+                    tokenId: bounty.id,
+                }
+            });
         },
         setGods(state, gods) {
             state.gods = gods.map((god) => {
@@ -40,6 +45,7 @@ export default {
                     level,
                     stats: [...stats[level - 1]],
                     power: (stats[level-1][0] + stats[level-1][1] + stats[level-1][2] + stats[level-1][3]) * 100,
+                    tokenId: god.id,
                 }
             });
         },

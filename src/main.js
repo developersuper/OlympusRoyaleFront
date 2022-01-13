@@ -9,6 +9,7 @@ import Vue3VideoPlayer from '@cloudgeek/vue3-video-player'
 import '@cloudgeek/vue3-video-player/dist/vue3-video-player.css'
 import VueLazyLoad from 'vue3-lazyload'
 import "tippy.js/animations/shift-toward-subtle.css";
+import Cloudinary from 'cloudinary-vue';
 
 import "./assets/css/main.css";
 
@@ -28,4 +29,9 @@ createApp(App)
   .use(VueTippy)
   .use(Donut)
   .use(VueLazyLoad)
+  .use(Cloudinary, {
+    configuration: {
+      cloudName: "dlqoivlg9"
+    }
+  })
   .mount("#app");

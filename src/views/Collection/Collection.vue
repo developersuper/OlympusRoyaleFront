@@ -79,19 +79,8 @@
   <div v-if="filteredCards[1].length" class="flex flex-wrap overflow-visible wow fadeInDown" data-wow-duration=".6s" data-wow-delay=".55s">
     <div class="font-heading fade-in px-4 pb-4 text-sm flex 2xl:w-1/4 xl:w-1/3 md:w-1/2 w-full h-auto justify-between" v-for="card in filteredCards[0]" v-bind:key="card.image">
       <Popup 
-        v-bind:cards="filteredCards[0]"
-        v-bind:id="card.id" 
-        v-bind:name="card.name" 
-        v-bind:image="card.image"
-        v-bind:video="card.video"  
-        v-bind:level="card.level" 
-        v-bind:power="card.power" 
-        v-bind:attack="card.attack" 
-        v-bind:defense="card.defense"
-        v-bind:vitality="card.vitality"
-        v-bind:speed="card.speed"
-        v-bind:win="card.win"
-        v-bind:lost="card.lost"
+        :cards="filteredCards[1]"
+        :id="card.id" 
         @close="showPopup = false" 
         v-if="showPopup == card.id"
       />
