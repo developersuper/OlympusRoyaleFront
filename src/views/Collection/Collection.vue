@@ -77,7 +77,7 @@
     </div>
   </span>
   <div v-if="filteredCards[1].length" class="flex flex-wrap overflow-visible wow fadeInDown" data-wow-duration=".6s" data-wow-delay=".55s">
-    <div class="font-heading fade-in px-2 pb-4 text-sm flex 2xl:w-1/5 xl:w-1/4 md:w-1/3 w-full h-auto justify-between" v-for="card in filteredCards[0]" v-bind:key="card.image">
+    <div class="font-heading fadeInDown px-2 pb-4 text-sm flex 2xl:w-1/5 xl:w-1/4 md:w-1/3 w-full h-auto justify-between" v-for="card in filteredCards[0]" v-bind:key="card.image">
       <Popup 
         :cards="filteredCards[1]"
         :id="card.id" 

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-900 border rounded-3xl border-gray-bc w-full px-2 pt-4 pb-2 nft-cards cursor-pointer wow flipInX" data-wow-duration="1s" data-wow-delay=".55s">
+  <div class="bg-gray-900 border rounded-3xl border-gray-bc w-full px-2 pt-4 pb-2 nft-cards cursor-pointer wow fadeInDown" data-wow-duration="1s" data-wow-delay=".55s">
     <img 
       :class="[
         imageStyle,

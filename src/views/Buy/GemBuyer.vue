@@ -3,7 +3,7 @@
     <p class="flex justify-center mb-12 text-md text-center text-gray-200 font-semibold sm:text-xl p-4 sm:p-1">Want to play more? Look no further than Chronus Gems which<br /> can turn back time and replenish your gods’ stamina for an extra round.</p>
     <div class="max-w-5xl sm:mx-auto">
         <div class="flex flex-col lg:flex-row lg:space-y-0 space-y-16 lg:space-x-6">
-            <div class="lg:w-1/3 cursor-not-allowed max-w-sm mx-auto w-full text-white text-center rounded-2xl shadow-smooth border border-gray-500 bg-gray-800 battle-typee transition-transform duration-200 transform wow lightSpeedIn relative" data-wow-duration="1s" data-wow-delay=".55s">
+            <div class="lg:w-1/3 cursor-not-allowed max-w-sm mx-auto w-full text-white text-center rounded-2xl shadow-smooth border border-gray-500 bg-gray-800 battle-typee transition-transform duration-200 transform wow fadeInDown relative" data-wow-duration="1s" data-wow-delay=".55s">
                 <div class="absolute w-full h-full rounded-2xl bg-gray-black z-40 opacity-50 cursor-not-allowed"></div>
                 <div class="relative flex place-content-center">
                 <img class="absolute h-24 -top-10 z-50" src="@/assets/btn-gembuy-small.png" />
@@ -38,7 +38,7 @@
                     </button>
                 </div>
             </div>
-            <div class="cursor-not-allowed lg:w-1/3 cursor-pointer max-w-sm mx-auto w-full text-white text-center rounded-2xl shadow-smooth border border-gray-500 bg-gray-800 battle-typee transition-transform duration-200 transform wow lightSpeedIn relative" data-wow-duration="1s" data-wow-delay=".55s">
+            <div class="cursor-not-allowed lg:w-1/3 cursor-pointer max-w-sm mx-auto w-full text-white text-center rounded-2xl shadow-smooth border border-gray-500 bg-gray-800 battle-typee transition-transform duration-200 transform wow fadeInDown relative" data-wow-duration="1s" data-wow-delay=".55s">
                 <div class="absolute w-full h-full bg-gray-black z-40 opacity-50 cursor-not-allowed rounded-2xl"></div>
                 <div class="relative flex place-content-center">
                 <img class="absolute h-24 -top-10 z-50" src="@/assets/btn-gembuy-big.png" />
@@ -74,7 +74,7 @@
                     </button>
                 </div>
             </div>
-            <div class="lg:w-1/3 cursor-not-allowed max-w-sm mx-auto w-full text-white text-center rounded-2xl shadow-smooth border border-gray-500 bg-gray-800 battle-typee transition-transform duration-200 transform wow lightSpeedIn relative" data-wow-duration="1s" data-wow-delay=".55s">
+            <div class="lg:w-1/3 cursor-not-allowed max-w-sm mx-auto w-full text-white text-center rounded-2xl shadow-smooth border border-gray-500 bg-gray-800 battle-typee transition-transform duration-200 transform wow fadeInDown relative" data-wow-duration="1s" data-wow-delay=".55s">
                 <div class="absolute w-full h-full bg-gray-black z-40 opacity-50 cursor-not-allowed rounded-2xl"></div>
                 <div class="relative flex place-content-center">
                 <img class="absolute h-24 -top-10 z-50" src="@/assets/btn-gembuy-large.png" />

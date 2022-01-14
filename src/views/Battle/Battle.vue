@@ -3,7 +3,7 @@
   <div v-if="!battle">
     <div class="max-w-5xl sm:mx-auto">
       <div class="flex flex-col lg:flex-row lg:space-y-0 space-y-16 lg:space-x-6">
-        <div class="lg:w-1/3 cursor-not-allowed max-w-sm mx-auto w-full text-white text-center rounded-lg shadow-smooth border border-gray-700 bg-gray-800 battle-typee relative">
+        <div class="lg:w-1/3 cursor-not-allowed max-w-sm mx-auto w-full text-white text-center rounded-lg shadow-smooth border border-gray-700 bg-gray-800 battle-typee relative fadeInDown">
           <div class="absolute w-full h-full bg-gray-black z-40 opacity-50 cursor-not-allowed rounded-lg"></div>
           <div class="relative flex place-content-center">
             <img class="absolute h-24 -top-10 z-50" src="@/assets/adventure-title.png" />
@@ -18,7 +18,7 @@
             </button>
           </div>
         </div>
-        <div @click="battle = 'quickmatch'" class="lg:w-1/3 cursor-pointer max-w-sm mx-auto w-full text-white text-center rounded-lg shadow-smooth border border-gray-700 bg-gray-800 battle-type">
+        <div @click="battle = 'quickmatch'" class="lg:w-1/3 cursor-pointer max-w-sm mx-auto w-full text-white text-center rounded-lg shadow-smooth border border-gray-700 bg-gray-800 battle-type fadeInDown">
           <div class="relative flex place-content-center">
             <img class="absolute h-24 -top-10" src="@/assets/quickmatch-title.png" />
             <img class="absolute flex place-self-center h-36" src="@/assets/battle-quick-battle-mode.png" />
@@ -32,7 +32,7 @@
             </button>
           </div>
         </div>
-        <div class="lg:w-1/3 cursor-not-allowed max-w-sm mx-auto w-full text-white text-center rounded-lg shadow-smooth border border-gray-700 bg-gray-800 battle-typee relative">
+        <div class="lg:w-1/3 cursor-not-allowed max-w-sm mx-auto w-full text-white text-center rounded-lg shadow-smooth border border-gray-700 bg-gray-800 battle-typee relative fadeInDown">
           <div class="absolute w-full h-full bg-gray-black z-40 opacity-50 cursor-not-allowed rounded-lg"></div>
           <div class="relative flex place-content-center">
             <img class="absolute h-24 -top-10 z-50" src="@/assets/olympusroyale-title.png" />
