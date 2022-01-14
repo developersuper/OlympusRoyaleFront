@@ -93,7 +93,7 @@
     :totalLength="filteredCards[1].length"
     :currentPage="page"
     :perPage="perPage"
-    :perPages="[16, 32, 64]"
+    :perPages="[25, 50, 75]"
     @updatePage="onChangePageInfo($event, 'page')"
     @updatePerPage="onChangePageInfo($event, 'perPage')"
   />
@@ -157,7 +157,7 @@ export default {
       cards: [],
       showPopup: "",
       page: 1,
-      perPage: 16,
+      perPage: 25,
     };
   },
   components: {
