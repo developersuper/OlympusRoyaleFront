@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-900 border rounded-3xl border-gray-bc w-full px-4 pt-4 pb-2 nft-cards cursor-pointer wow flipInX" data-wow-duration="1s" data-wow-delay=".55s">
+  <div class="bg-gray-900 border rounded-3xl border-gray-bc w-full px-2 pt-4 pb-2 nft-cards cursor-pointer wow flipInX" data-wow-duration="1s" data-wow-delay=".55s">
     <img 
       :class="[
         imageStyle,
@@ -14,8 +14,8 @@
      @click="toView" 
      alt="" 
     />
-    <p v-if="card.attributes[0].trait_type === 'God'" class="text-center text-lg text-white flex justify-center opensans leading-6">{{ card.name.slice(0, -10) }} <br /> Level {{ card.level }} </p>
-    <p v-if="card.attributes[0].trait_type === 'Bounty'" class="text-center mt-8 text-lg text-white flex justify-center opensans">{{ card.name }} </p>
+    <p v-if="card.attributes[0].trait_type === 'God'" class="text-center text-base text-white flex justify-center opensans leading-6">{{ card.name.slice(0, -10) }} <br /> Level {{ card.level }} </p>
+    <p v-if="card.attributes[0].trait_type === 'Bounty'" class="text-center mt-8 text-base text-white flex justify-center opensans">{{ card.name }} </p>
     <!-- <p v-if="card.attributes[0].trait_type === 'Bounty'" class="text-base sm:text-xl font-bold shadow-power text-white flex justify-center">RARITY: S+ (1 OF 1)</p> -->
     <span v-if="card.attributes[0].trait_type === 'God'" class="text-base sm:text-xl font-bold shadow-power text-white flex justify-center">POWER: {{ card.power }}</span>
     <div class="flex flex-row justify-center">
