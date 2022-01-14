@@ -34,6 +34,7 @@ export default {
                 return {
                     ...bounty,
                     tokenId: bounty.id,
+                    image: bounty.image.replace('w_240', 'w_480')
                 }
             });
         },
@@ -46,6 +47,7 @@ export default {
                     stats: [...stats[level - 1]],
                     power: (stats[level-1][0] + stats[level-1][1] + stats[level-1][2] + stats[level-1][3]) * 100,
                     tokenId: god.id,
+                    image: god.image.replace('w_240,h_370', 'w_480,h_740'),
                 }
             });
         },

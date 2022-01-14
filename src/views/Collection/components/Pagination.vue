@@ -18,8 +18,10 @@
         currentPagination === 0 ? 'cursor-not-allowed' : 'cursor-pointer',
         'w-6 h-6 sm:w-10 sm:h-10 mt-3 mr-1 sm:mr-2 hover:scale-110 cursor-pointer transition-all duration-200 transform'
       ]" 
-      src="@/assets/prev.png"
-      @click="toPrev()"  
+      :src="prevArrow"
+      @click="toPrev()"
+      @mouseover="hoverPrev = true"
+      @mouseout="hoverPrev = false"  
     />
     <div v-for="i in currentPageValues" :key="i">
       <div class="relative">
@@ -47,7 +49,7 @@
         </span>
         <span :class="[
             currentPage == i ? 'block' : 'hidden',
-            'absolute font-bold guavacandy-click z-50 cursor-pointer'
+            'absolute font-bold guavacandy-click z-30 cursor-pointer'
           ]"
         >
         {{ i }}
@@ -79,11 +81,13 @@
     </div>
     <img 
       :class="[
-        currentPagination == this.paginationLength - 1 ? 'cursor-not-allowed' : 'cursor-pointer',
+        currentPagination == paginationLength - 1 ? 'cursor-not-allowed' : 'cursor-pointer',
         'w-6 h-6 sm:w-10 sm:h-10 mt-3 ml-1 sm:ml-2 hover:scale-110 cursor-pointer transition-all duration-200 transform'
       ]" 
-      src="@/assets/right.png"
+      :src="nextArrow"
       @click="toNext()"  
+      @mouseover="hoverNext = true"
+      @mouseout="hoverNext = false"  
     />
   </div>
 </template>
@@ -91,6 +95,12 @@
 import { useSound } from '@vueuse/sound'
 
 import paginationSfx from '@/assets/sound/back.wav'
+import nextArrowImgDisabled from '@/assets/next_disabled.png';
+import nextArrowImg from '@/assets/next.png';
+import nextArrowImgHover from '@/assets/next-hover.png';
+import prevArrowImgDisabled from '@/assets/prev_disabled.png';
+import prevArrowImg from '@/assets/prev.png';
+import prevArrowImgHover from '@/assets/prev-hover.png';
 
 export default {
   props: {
@@ -108,6 +118,8 @@ export default {
   data() {
     return {
       currentPagination: 0,
+      hoverPrev: false,
+      hoverNext: false,
     }
   },
   methods: {
@@ -144,6 +156,16 @@ export default {
     },
     paginationLength() {
       return Math.ceil(1.0 * this.pageLength / 5);
+    },
+    prevArrow() {
+      if(this.currentPagination === 0) return prevArrowImgDisabled;
+      if(this.hoverPrev) return prevArrowImgHover;
+      return prevArrowImg;
+    },
+    nextArrow() {
+      if(this.currentPagination === this.paginationLength - 1) return nextArrowImgDisabled;
+      if(this.hoverNext) return nextArrowImgHover;
+      return nextArrowImg;
     }
   }
 }

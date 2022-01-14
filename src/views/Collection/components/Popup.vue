@@ -13,16 +13,20 @@
                   selected === 0 ? 'cursor-not-allowed' : 'cursor-pointer',
                   'absolute top-50pc left-0 w-10 h-10 sm:w-14 sm:h-14 mt-3 mr-1 sm:mr-2 hover:scale-110 transition-all duration-200 transform'
                 ]" 
-                src="@/assets/prev.png"
-                @click="toPrev()" 
+                :src="prevArrow"
+                @click="toPrev()"
+                @mouseover="hoverPrev = true"
+                @mouseout="hoverPrev = false"  
               />
               <img 
                 :class="[
                   selected === cards.length - 1 ? 'cursor-not-allowed' : 'cursor-pointer',
                   'absolute top-50pc right-0 w-10 h-10 sm:w-14 sm:h-14 mt-3 ml-1 sm:ml-2 hover:scale-110 transition-all duration-200 transform'
                 ]" 
-                src="@/assets/right.png" 
+                :src="nextArrow" 
                 @click="toNext()" 
+                @mouseover="hoverNext = true"
+                @mouseout="hoverNext = false"  
               />
               <a href="https://lootex.io/stores/olympus-royale" target="_blank">
                 <button
@@ -117,16 +121,20 @@
                   selected === 0 ? 'cursor-not-allowed' : 'cursor-pointer',
                   'absolute top-50pc z-40 left-0 w-10 h-10 sm:w-14 sm:h-14 mt-3 mr-1 sm:mr-2 hover:scale-110 transition-all duration-200 transform'
                 ]" 
-                src="@/assets/prev.png"
+                :src="prevArrow"
                 @click="toPrev()" 
+                @mouseover="hoverPrev = true"
+                @mouseout="hoverPrev = false"  
               />
               <img 
                 :class="[
                   selected === cards.length - 1 ? 'cursor-not-allowed' : 'cursor-pointer',
                   'absolute top-50pc z-40 right-0 w-10 h-10 sm:w-14 sm:h-14 mt-3 ml-1 sm:ml-2 hover:scale-110 transition-all duration-200 transform'
                 ]" 
-                src="@/assets/right.png" 
+                :src="nextArrow" 
                 @click="toNext()" 
+                @mouseover="hoverNext = true"
+                @mouseout="hoverNext = false" 
               />
               <div class="bg-gray-900 h-auto border rounded-3xl border-gray-700">
                 <!-- <video class="rounded-lg" autoplay="" controls="" controlslist="nodownload" loop="" playsinline="" preload="auto">
@@ -156,6 +164,12 @@ import { useSound } from '@vueuse/sound'
 import nextSfx from '@/assets/sound/back.wav'
 import { nftImages } from '@/assets/loadingNfts/nfts.js'
 // import { getPrevDefeats, getPrevWins } from '@/web3/nft.js'
+import nextArrowImgDisabled from '@/assets/next_disabled.png';
+import nextArrowImg from '@/assets/next.png';
+import nextArrowImgHover from '@/assets/next-hover.png';
+import prevArrowImgDisabled from '@/assets/prev_disabled.png';
+import prevArrowImg from '@/assets/prev.png';
+import prevArrowImgHover from '@/assets/prev-hover.png';
 
 export default {
   props: ["cards", "id"],
@@ -166,6 +180,8 @@ export default {
       vitalityColor: "#26d670",
       speedColor: "#e9bd24",
       selected: 0,
+      hoverPrev: false,
+      hoverNext: false,
     };
   },
   setup() {
@@ -218,6 +234,16 @@ export default {
         return nftImages[`bounties${this.model.image.split('/')[8].split('.')[0]}`];
       }
       return '';
+    },
+    prevArrow() {
+      if(this.selected === 0) return prevArrowImgDisabled;
+      if(this.hoverPrev) return prevArrowImgHover;
+      return prevArrowImg;
+    },
+    nextArrow() {
+      if(this.selected === this.cards.length - 1) return nextArrowImgDisabled;
+      if(this.hoverNext) return nextArrowImgHover;
+      return nextArrowImg;
     }
   }
 };

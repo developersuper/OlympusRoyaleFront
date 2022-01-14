@@ -196,7 +196,10 @@ export default {
     },
     onChangePageInfo(value, info) {
       if(info === 'page') this.page = value;
-      if(info === 'perPage') this.perPage = value;
+      if(info === 'perPage') {
+        this.perPage = value;
+        this.page = 1;
+      }
       console.log(value, info);
     },
     toView(e) {
