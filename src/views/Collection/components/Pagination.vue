@@ -139,6 +139,7 @@ export default {
     },
     setPerPage(perPage) {
       this.paginationSound.play();
+      this.currentPagination = 0;
       this.$emit('updatePerPage', perPage);
     }
   },
